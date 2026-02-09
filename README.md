@@ -44,7 +44,7 @@ If you notice a bug, have an idea for a new feature, or see incorrect data:
 ### 💻 Option 2: For Team Members with Coding Experience
 If you are comfortable writing code and want to implement changes yourself:
 1. navigate to the file you want to commit/change and press the edit button.
-<img src="https://i.postimg.cc/xdgzJstW/screenshot-13.png" style="width: 50px" width="50"/>
+<img src="https://i.postimg.cc/xdgzJstW/screenshot-13.png" style="width: 450px" width="50"/>
 2. it will ask you to make a fork of this app. kindly follow the steps until it lets you edit the targeted file.
 3. make your own change on the target file and test them locally using `npm run dev`. (needs the repo to be cloned in order to test. ignore if you didn't clone)
 4. press **commit changes** button, and add a clear commit message of what you have done.
