@@ -91,7 +91,7 @@ export default function FleetsPage() {
       speed: 'Mach 0.85',
       capacity: '440 passengers',
       description: null,
-      voteUrl: '#'
+      voteUrl: 'https://community.infiniteflight.com/t/egyptair-a350-900/1150828'
     },
   ];
 
