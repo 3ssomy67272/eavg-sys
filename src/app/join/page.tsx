@@ -48,7 +48,7 @@ export default function JoinNowPage() {
       embeds: [
         {
           title: "✈️ EgyptAir Virtual Application",
-          color: 0x0070f3, // EgyptAir blue color
+          color: 0x0070f3, // EgyptAir blue theme
           fields: [
             { name: "Pilot Name", value: formData.pilotName, inline: true },
             { name: "Email", value: formData.email, inline: true },

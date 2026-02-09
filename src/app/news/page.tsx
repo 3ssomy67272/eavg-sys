@@ -40,11 +40,9 @@ export default function NewsPage() {
     ]
   };
 
-  // Mock Recent News data
+  // Recent News data
   const newsByTopic = [
-    // {
-    //   topic: 'catagory',
-    //   news: [
+    // example news template. copy and fill as needed. don't forget to remove slashes
     //     {
     //       title: 'post1',
     //       date: 'date',

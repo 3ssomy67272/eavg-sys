@@ -9,6 +9,16 @@ export default function EventsPage() {
 
   // Manual Event Data until linked we create a database and link when the system fully ready
   const events = [
+    // Example Event copy the template and fill the details as needed. don't forget to remove slashes
+    // {
+    //   id: number,
+    //   title: 'event title',
+    //   startTime: 'YYYY-MM-DDTHH:MM:SSZ', //example: '2026-02-01T14:30:00Z',
+    //   durationMinutes: number,  // minutes
+    //   route: 'route',
+    //   aircraft: 'aircraft',
+    //   forumLink: 'event link',
+    // },
     {
       id: 1,
       title: 'AEROFLOT VIRTUAL | Inaugural Event',
@@ -233,7 +243,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* Host Your Event */}
+      {/* end of event page */}
       <section className="py-24 bg-[#042C64] text-white overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal animation="zoom-in">

@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from 'react';
-import { Search, ExternalLink, MapPin, Clock, Info } from 'lucide-react';
+import { Search, ExternalLink, MapPin, Clock } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export default function PilotRosterPage() {
   const [searchTerm, setSearchTerm] = useState('');
 
-  //  manual data input to be linked with VA's future database
+  //  manual data input. to be linked with VA's future database
   const pilots = [
     {
       id: '1',
@@ -35,7 +35,7 @@ export default function PilotRosterPage() {
       callsign: 'MSR003VG',
       rank: 'Chief Pilot',
       hours: 1355,
-      location: 'Egypt',
+      location: 'Canada',
       joinDate: 'FEB 2025',
       forumProfile: 'https://community.infiniteflight.com/u/eyadradwan209/'
     },
@@ -99,7 +99,7 @@ export default function PilotRosterPage() {
     pilot.rank.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Sort by hours descending
+  // Sort by callsign descending
   const sortedPilots = [...filteredPilots].sort((a, b) => a.callsign.localeCompare(b.callsign));
 
   return (
@@ -143,9 +143,10 @@ export default function PilotRosterPage() {
       {/* Roster Table */}
       <section className="py-12 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Search */}
           <ScrollReveal animation="slide-up">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-              <div className="relative max-w-md w-full">
+            <div className="mb-8">
+              <div className="relative max-w-md mx-auto md:mx-0">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
@@ -154,10 +155,6 @@ export default function PilotRosterPage() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-[#042C64] shadow-sm transition-all"
                 />
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-lg text-blue-800 text-sm md:max-w-xs">
-                <Info className="w-4 h-4 flex-shrink-0" />
-                <p>Pilot rosters are monthly updated as the data is not connected to an official database yet.</p>
               </div>
             </div>
           </ScrollReveal>
