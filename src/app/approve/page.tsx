@@ -14,7 +14,7 @@ function ApproveContent() {
   // Get username from URL parameter
   const username = searchParams.get('username');
   
-  // Fixed templates from PRD (cannot be overridden)
+  // IFC approval message template
   const TITLE_TEMPLATE = "Your EgyptAir Application Update!";
   const BODY_TEMPLATE = `
   
