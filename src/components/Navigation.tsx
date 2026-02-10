@@ -248,21 +248,21 @@ export default function Navigation() {
                     Staff
                   </Link>
                   <Link
-                    href="/about/roster"
+                    href="/about/rosters"
                     className="block text-white/80 hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Pilot Roster
                   </Link>
                   <Link
-                    href="/about/conduct"
+                    href="/about/CoC"
                     className="block text-white/80 hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Code of Conduct
                   </Link>
                   <Link
-                    href="/about/contact"
+                    href="/about/contacts"
                     className="block text-white/80 hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
