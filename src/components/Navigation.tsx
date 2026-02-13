@@ -104,19 +104,19 @@ export default function Navigation() {
                   Staff
                 </Link>
                 <Link
-                  href="/about/rosters"
+                  href="/about/roster"
                   className="block px-4 py-2 text-[#042C64] hover:bg-gray-100"
                 >
                   Pilot Roster
                 </Link>
                 <Link
-                  href="/about/CoC"
+                  href="/about/Conduct"
                   className="block px-4 py-2 text-[#042C64] hover:bg-gray-100"
                 >
                   Code of Conduct
                 </Link>
                 <Link
-                  href="/about/contacts"
+                  href="/about/contact"
                   className="block px-4 py-2 text-[#042C64] hover:bg-gray-100"
                 >
                   Contact
