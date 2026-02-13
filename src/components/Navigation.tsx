@@ -104,19 +104,19 @@ export default function Navigation() {
                   Staff
                 </Link>
                 <Link
-                  href="/about/roster"
+                  href="/about/rosters"
                   className="block px-4 py-2 text-[#042C64] hover:bg-gray-100"
                 >
                   Pilot Roster
                 </Link>
                 <Link
-                  href="/about/Conduct"
+                  href="/about/CoC"
                   className="block px-4 py-2 text-[#042C64] hover:bg-gray-100"
                 >
                   Code of Conduct
                 </Link>
                 <Link
-                  href="/about/contact"
+                  href="/about/contacts"
                   className="block px-4 py-2 text-[#042C64] hover:bg-gray-100"
                 >
                   Contact
@@ -248,21 +248,21 @@ export default function Navigation() {
                     Staff
                   </Link>
                   <Link
-                    href="/about/roster"
+                    href="/about/rosters"
                     className="block text-white/80 hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Pilot Roster
                   </Link>
                   <Link
-                    href="/about/Conduct"
+                    href="/about/CoC"
                     className="block text-white/80 hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Code of Conduct
                   </Link>
                   <Link
-                    href="/about/contact"
+                    href="/about/contacts"
                     className="block text-white/80 hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
