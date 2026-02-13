@@ -44,7 +44,7 @@ export default function GettingStartedPage() {
           <ScrollReveal animation="fade-in">
             <h1 className="text-3xl md:text-5xl font-bold mb-6">Getting Started with EAVG</h1>
             <p className="max-w-2xl mx-auto text-lg">
-              Your journey to becoming an EgyptAir Virtual pilot starts here. Follow these simple steps to join our community.
+              Your journey to become an EgyptAir Virtual pilot starts here. Follow these simple steps to join our community.
             </p>
           </ScrollReveal>
        </div>

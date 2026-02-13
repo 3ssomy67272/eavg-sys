@@ -98,7 +98,7 @@ export default function AboutPage() {
       <section className="py-20 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="slide-up">
-            <h2 className="mb-8 text-center text-[#042C64] font-semibold">Who we are.?</h2>
+            <h2 className="mb-8 text-center text-[#042C64] font-semibold">Who we are ?</h2>
             <div className="prose max-w-none text-gray-700 space-y-4">
               <p>
               Founded in May 2024, EgyptAir Virtual Group (EAVG) is based at Cairo International Airport in North Africa. and a member of  Star Alliance Virtual, our mission is to create a welcoming environment for everyone. We offer pilots the opportunity to explore the world with our diverse African fleet, free of restrictions. and +15 codeshare partnerships with your favorite Virtual Airlines
