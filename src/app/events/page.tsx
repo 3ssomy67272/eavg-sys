@@ -62,16 +62,16 @@ export default function EventsPage() {
       durationMinutes: 240,    //4:00 hours
       route: 'HECA - OOMS',
       aircraft: 'EgyptAir | Boeing 737-800',
-      forumLink: 'https://community.infiniteflight.com/t/22feb26-oman-air-virtual-presents-muscat-airshow/1138393/3'
+      forumLink: 'https://community.infiniteflight.com/t/22feb26-oman-air-virtual-presents-muscat-airshow/1138393'
     },
     {
       id: 6,
       title: 'Suadi Founding Day',
-      startTime: '2026-2-22T18:00:00Z',
+      startTime: '2026-02-22T18:00:00Z',
       durationMinutes: 600,    //10:00. hours
       route: 'OERK - OEDF',
       aircraft: 'Saudi Airlines | Airbus 330-300',
-      forumLink: 'https://community.infiniteflight.com/t/22feb26-saudi-founding-day-by-saudia-virtual/1144488?u=sir_ryan'
+      forumLink: 'https://community.infiniteflight.com/t/22feb26-saudi-founding-day-by-saudia-virtual/1144488'
     }
   ];
 
