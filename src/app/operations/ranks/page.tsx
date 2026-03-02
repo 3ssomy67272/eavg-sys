@@ -1,6 +1,7 @@
 "use client";
 
-import { Award, Star } from 'lucide-react';
+import Image from 'next/image';
+import { Award, Star, Plane  } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export default function RanksPage() {
@@ -9,7 +10,7 @@ export default function RanksPage() {
       id: '1',
       name: 'Cadet',
       minHours: 0,
-      image: null,
+      image: 'https://i.postimg.cc/Nj8L2TRT/R1.png',
       color: 'bg-gray-100',
       textColor: 'text-gray-700',
       features: [
@@ -22,7 +23,7 @@ export default function RanksPage() {
       id: '2',
       name: 'Junior Officer',
       minHours: 20,
-      image: null,
+      image: 'https://i.postimg.cc/LsH5tXT8/R2.png',
       color: 'bg-blue-100',
       textColor: 'text-blue-700',
       features: [
@@ -33,7 +34,7 @@ export default function RanksPage() {
       id: '3',
       name: 'First Officer',
       minHours: 50,
-      image: null,
+      image: 'https://i.postimg.cc/tTJgcMwn/R3.png',
       color: 'bg-blue-100',
       textColor: 'text-blue-700',
       features: [
@@ -46,7 +47,7 @@ export default function RanksPage() {
       id: '4',
       name: 'Senior Officer',
       minHours: 100 ,
-      image: null,
+      image: 'https://i.postimg.cc/k4G5Hpzf/R4.png',
       color: 'bg-blue-100',
       textColor: 'text-blue-700',
       features: [
@@ -58,7 +59,7 @@ export default function RanksPage() {
       id: '5',
       name: 'Captain',
       minHours: 200,
-      image: null,
+      image: 'https://i.postimg.cc/pTrdS647/R5.png',
       color: 'bg-blue-100',
       textColor: 'text-blue-700',
       features: [
@@ -70,7 +71,7 @@ export default function RanksPage() {
       id: '6',
       name: 'Senior Captain',
       minHours: 500,
-      image:  null,
+      image: 'https://i.postimg.cc/0Q4N1C1B/R6.png',
       color: 'bg-blue-100',
       textColor: 'text-blue-700',
       features: [
@@ -82,7 +83,7 @@ export default function RanksPage() {
       id: '7',
       name: 'Commander',
       minHours: 500,
-      image: null,
+      image: 'https://i.postimg.cc/vBKmwvwp/R7.png',
       color: 'bg-blue-100',
       textColor: 'text-blue-700',
       features: [
@@ -94,7 +95,7 @@ export default function RanksPage() {
       id: '8',
       name: 'Elite Commander',
       minHours: 700,
-      image: null,
+      image: 'https://i.postimg.cc/JnFhCQW7/R8.png',
       color: 'bg-blue-100',
       textColor: 'text-blue-700',
       features: [
@@ -105,7 +106,7 @@ export default function RanksPage() {
       id: '9',
       name: 'Chief pilot',
       minHours: 1000,
-      image: null,
+      image: 'https://i.postimg.cc/C5fxhfFw/R9.png',
       color: 'bg-blue-100',
       textColor: 'text-blue-700',
       features: [
@@ -116,7 +117,7 @@ export default function RanksPage() {
       id: '10',
       name: 'Legend',
       minHours: 1500,
-      image: null,
+      image: 'https://i.postimg.cc/yxS81SVW/R10.png',
       color: 'bg-yellow-100',
       textColor: 'text-yellow-700',
       features: [
@@ -176,8 +177,14 @@ export default function RanksPage() {
                   } hover:shadow-lg transition-all hover:-translate-y-1 h-full`}
                 >
                   <div className="text-center mb-6">
-                    <div className="w-20 h-20 mx-auto mb-3 flex items-center justify-center text-5xl bg-white/50 rounded-full shadow-sm">
-                      {rank.image}
+                    <div className="w-40 mx-auto mb-3 flex items-center justify-center shadow-md rounded-md">
+                      {rank.image ? (
+                        <img src={rank.image} alt={`${rank.name} badge`} className="w-40 object-contain rounded-md" 
+                          onError={(e) => {e.currentTarget.style.display = 'none';}}
+                        />
+                      ) : (
+                        <Plane  className="w-8 h-8 text-gray-400" />
+                      )}
                     </div>
                     <h3 className={`mb-2 font-bold ${rank.textColor}`}>{rank.name}</h3>
                     <div className="flex items-center justify-center gap-2 text-gray-600 font-medium">
