@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Search, ExternalLink, MapPin, Clock } from 'lucide-react';
+import { Search, ExternalLink, MapPin, Clock, Info } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export default function PilotRosterPage() {
@@ -14,7 +14,7 @@ export default function PilotRosterPage() {
       name: 'Essam Morgan',
       callsign: 'MSR001VG',
       rank: 'Legend',
-      hours: 1790,
+      hours: 1818,
       location: 'Egypt',
       joinDate: 'MAY 2024',
       forumProfile: 'https://community.infiniteflight.com/u/3ssomy167/'
@@ -24,7 +24,7 @@ export default function PilotRosterPage() {
       name: 'Hussain Makhdoomi',
       callsign: 'MSR002VG',
       rank: 'Chief Pilot',
-      hours: 1000,
+      hours: 1224,
       location: 'India',
       joinDate: 'FEB 2024',
       forumProfile: 'https://community.infiniteflight.com/u/hussain_makhdoomi2/'
@@ -34,7 +34,7 @@ export default function PilotRosterPage() {
       name: 'Eyad Radwan',
       callsign: 'MSR003VG',
       rank: 'Chief Pilot',
-      hours: 1355,
+      hours: 1484,
       location: 'Canada',
       joinDate: 'FEB 2025',
       forumProfile: 'https://community.infiniteflight.com/u/eyadradwan209/'
@@ -74,7 +74,7 @@ export default function PilotRosterPage() {
       name: 'Adam Ashraf',
       callsign: 'MSR990VG',
       rank: 'Captain',
-      hours: 227,
+      hours: 277,
       location: "Egypt",
       joinDate: 'SEP 2025',
       forumProfile: 'https://community.infiniteflight.com/u/adam_ashraf/'
@@ -84,10 +84,20 @@ export default function PilotRosterPage() {
       name: 'ChrisIF',
       callsign: 'MSR248VG',
       rank: 'Senior Officer',
-      hours: 167,
+      hours: 195,
       location: null,
       joinDate: 'NOV 2025',
       forumProfile: 'https://community.infiniteflight.com/u/Krzysztof_Paszek/'
+    },
+    {
+      id: '9',
+      name: 'Andre-luc_Maran',
+      callsign: 'MSR357VG',
+      rank: 'Cadet',
+      hours: 0,
+      location: null,
+      joinDate: 'JAN 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Andre-luc_Maran/'
     },
   ];
 
@@ -145,8 +155,8 @@ export default function PilotRosterPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Search */}
           <ScrollReveal animation="slide-up">
-            <div className="mb-8">
-              <div className="relative max-w-md mx-auto md:mx-0">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+              <div className="relative max-w-md w-full">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
@@ -155,6 +165,10 @@ export default function PilotRosterPage() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-[#042C64] shadow-sm transition-all"
                 />
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-lg text-blue-800 text-sm md:max-w-xs">
+                <Info className="w-4 h-4 flex-shrink-0" />
+                <p>Pilot rosters are monthly updated as the data is not connected to an official database yet.</p>
               </div>
             </div>
           </ScrollReveal>
