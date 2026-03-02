@@ -69,6 +69,11 @@ export default function NewsPage() {
       topic: 'VA Updates',
       news: [
         {
+          title: '✈️ Closure of Gulf Airspaces! ✈️',
+          date: '28 February 2026',
+          summary: 'Due to rising tensions in the region and the closure of several airspaces, all routes to the airports within the following airspaces are prohibited to be flown (UAE | Qatar | Bahrain | Iraq | Lebanon | Jordan | Kuwait).'
+        },
+        {
           title: '✈️ New Codeshare Announcement! ✈️',
           date: '11 January 2026',
           summary: 'We’re excited to announce a new codeshare partnership with Lufty Virtual, expanding our European network with key regional, continental, and long-haul connections operated from Germany’s major hubs. 🤝✨.'
@@ -83,6 +88,16 @@ export default function NewsPage() {
     {
       topic: 'Pilots Achievements',
       news: [
+        // {
+        //   title: '🌟 February Pilot of the Month (POTM) 🌟',
+        //   date: '1 March 2026',
+        //   summary: `Let's give a huge congratulations to our March Pilot of the Month [someone] in our forum thread ! 🎉👏✈️.`
+        // },
+        {
+          title: '🌟January Pilot of the Month (POTM)🌟',
+          date: '4 February 2026',
+          summary: `When a pilot consistently tracks their progress throughout the month, boom! They earn the title of Pilot of the Month! 🎉 Please join us in congratulating Captain Eyad | 003VG in our forum thread for being January Pilot of the Month (POTM)! 👏✈️.`
+        },
         {
           title: '🌟December Pilot of the Month (POTM)🌟',
           date: '2 January 2026',
