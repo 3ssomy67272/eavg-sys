@@ -32,7 +32,7 @@ export default function FleetsPage() {
       name: 'Airbus A330-300',
       image: 'https://i.postimg.cc/DzdGJJRn/Screenshot-6.png',   //https://postimg.cc/delete/LGvPzBgP/536abe24
       count: 8,
-      range: '7,250 NM',
+      range: '7,262 NM',
       speed: 'Mach 0.82',
       capacity: '287 passengers',
       description: null,
@@ -87,7 +87,7 @@ export default function FleetsPage() {
       name: 'Airbus A350-900',
       image: 'https://i.postimg.cc/g0nWPvSX/A359.jpg',   //https://postimg.cc/delete/JSBL7Tnp/1e761bfe
       count: 0,
-      range: '8,100 NM',
+      range: '8,099 NM',
       speed: 'Mach 0.85',
       capacity: '440 passengers',
       description: null,
