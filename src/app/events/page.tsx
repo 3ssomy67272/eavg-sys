@@ -21,58 +21,14 @@ export default function EventsPage() {
     // },
     {
       id: 1,
-      title: 'AEROFLOT VIRTUAL | Inaugural Event',
-      startTime: '2026-02-01T14:30:00Z',
-      durationMinutes: 220,  // 3:40 hours
-      route: 'HESH - UUEE',
-      aircraft: 'EgyptAir | Airbus A330-300',
-      forumLink: 'https://community.infiniteflight.com/t/24jan26-aeroflot-virtual-inaugural-event-uuee-fly-in-fly-out/1127473',
+      title: '9 Years of AFKLM',
+      startTime: '2026-03-01T16:00:00Z',
+      durationMinutes: 250,  // 4:10 hours
+      route: 'LFPG -> HECA',
+      aircraft: 'EgyptAir | Boeing 777-300ER',
+      forumLink: 'https://community.infiniteflight.com/t/afklm-va-presents-9th-anniversary-eham-lfpg/1147102',
     },
-    {
-      id: 2,
-      title: 'IAGVA Presents : Viva La Vueling',
-      startTime: '2026-02-07T19:00:00Z',
-      durationMinutes: 235,  // 3:55 hours
-      route: 'HECA - LEBL',
-      aircraft: 'EgyptAir | Boeing 737-800',
-      forumLink: 'https://community.infiniteflight.com/t/07feb26-iagva-presents-viva-la-vueling-lebl-fly-in-out-event/1131281',
-    },
-    {
-      id: 3,
-      title: 'South African Virtual Presents: Mother City Overload',
-      startTime: '2026-02-08T18:00:00Z',
-      durationMinutes: 600,  // 10:00 hours
-      route: 'SBGR - FACT',
-      aircraft: 'South African | Airbus A330-300',
-      forumLink: 'https://community.infiniteflight.com/t/08feb26-south-african-virtual-presents-mother-city-overload-fact-fly-in-out/1133946',
-    },
-    {
-      id: 4,
-      title: 'Incheon Invasion',
-      startTime: '2026-02-14T11:00:00Z',
-      durationMinutes: 360,  // 7:00 hours
-      route: 'WADD - RKSI',
-      aircraft: 'Garuda Indonesia | Airbus A330-900',
-      forumLink: 'https://community.infiniteflight.com/t/14feb26-keva-x-jjva-incheon-invasion-rksi-fly-in/1143391',
-    },
-    {
-      id: 5,
-      title: 'Muscat Airshow',
-      startTime: '2026-02-21T14:00:00Z',
-      durationMinutes: 240,    //4:00 hours
-      route: 'HECA - OOMS',
-      aircraft: 'EgyptAir | Boeing 737-800',
-      forumLink: 'https://community.infiniteflight.com/t/22feb26-oman-air-virtual-presents-muscat-airshow/1138393'
-    },
-    {
-      id: 6,
-      title: 'Suadi Founding Day',
-      startTime: '2026-02-22T18:00:00Z',
-      durationMinutes: 600,    //10:00. hours
-      route: 'OERK - OEDF',
-      aircraft: 'Saudi Airlines | Airbus 330-300',
-      forumLink: 'https://community.infiniteflight.com/t/22feb26-saudi-founding-day-by-saudia-virtual/1144488'
-    }
+    
   ];
 
   useEffect(() => {
@@ -265,7 +221,7 @@ export default function EventsPage() {
       <section className="py-24 bg-[#042C64] text-white overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal animation="zoom-in">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Don't miss more events!</h2>
+            <h3 className="text-3xl md:text-5xl font-bold mb-6">Don't miss more events!</h3>
             <p className="text-xl mb-10 opacity-80 max-w-2xl mx-auto">
               We're missing a lot of fun without having you participating. Join us today!
             </p>
