@@ -121,7 +121,7 @@ export default function ContactPage() {
       <section className="py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="slide-up">
-            <h2 className="mb-12 text-center text-[#042C64] font-semibold">Get in Touch</h2>
+            <h2 className="mb-12 text-center text-[#042C64] font-bold">Get in Touch</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
@@ -152,7 +152,7 @@ export default function ContactPage() {
                   <div className="w-16 h-16 bg-[#042C64] rounded-full flex items-center justify-center mx-auto mb-4">
                     {method.icon}
                   </div>
-                  <h3 className="mb-3 text-[#042C64]">{method.title}</h3>
+                  <h3 className="mb-3 text-[#042C64] font-semibold">{method.title}</h3>
                   <p className="text-gray-600 mb-4">{method.desc}</p>
                   {method.href ? (
                     <a href={method.href} className="text-[#042C64] hover:underline">
@@ -174,7 +174,7 @@ export default function ContactPage() {
       <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="slide-up">
-            <h2 className="mb-8 text-center text-[#042C64] font-semibold">Frequently Asked Questions</h2>
+            <h2 className="mb-8 text-center text-[#042C64] font-bold">Frequently Asked Questions</h2>
           </ScrollReveal>
           <div className="space-y-6">
             {[
@@ -193,7 +193,7 @@ export default function ContactPage() {
             ].map((faq, i) => (
               <ScrollReveal key={i} animation="slide-up" delay={i * 100}>
                 <div className="bg-white p-6 rounded-lg border border-gray-200">
-                  <h3 className="mb-2 text-[#042C64]">{faq.q}</h3>
+                  <h3 className="mb-2 text-[#042C64] font-semibold">{faq.q}</h3>
                   <p className="text-gray-700">{faq.a}</p>
                 </div>
               </ScrollReveal>

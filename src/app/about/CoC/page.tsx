@@ -66,13 +66,13 @@ export default function CodeOfConductPage() {
             ].map((principle, index) => (
               <ScrollReveal key={index} animation="slide-up" delay={index * 100}>
                 <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="mb-3 text-[#042C64] flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#042C64]/5 text-[#042C64] flex items-center justify-center text-sm font-bold">
+                  <h3 className="mb-3 text-[#042C64] flex items-center gap-3 font-semibold">
+                    <span className="w-8 h-8 rounded-full bg-[#042C64]/5 text-[#042C64] flex items-center justify-center font-bold">
                       {index + 1}
                     </span>
                     {principle.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed font-light">
                     {principle.content}
                   </p>
                 </div>

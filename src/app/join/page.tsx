@@ -179,7 +179,7 @@ export default function JoinNowPage() {
                 <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg h-full">
                   <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="mb-1 text-[#042C64]">{req.title}</h3>
+                    <h3 className="mb-1 text-[#042C64] font-semibold">{req.title}</h3>
                     <p className="text-gray-600">{req.desc}</p>
                   </div>
                 </div>

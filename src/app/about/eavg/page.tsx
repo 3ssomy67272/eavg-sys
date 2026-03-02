@@ -8,7 +8,7 @@ import CountUp from '@/components/CountUp';
 
 export default function AboutPage() {
   const [statsData, setStatsData] = useState({
-    pilots: 8,
+    pilots: 9,
     routes: 200,
     hours: 1500,
     partners: 21
@@ -98,7 +98,7 @@ export default function AboutPage() {
       <section className="py-20 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="slide-up">
-            <h2 className="mb-8 text-center text-[#042C64] font-semibold">Who we are ?</h2>
+            <h2 className="mb-8 text-center text-[#042C64] font-bold">Who we are ?</h2>
             <div className="prose max-w-none text-gray-700 space-y-4">
               <p>
               Founded in May 2024, EgyptAir Virtual Group (EAVG) is based at Cairo International Airport in North Africa. and a member of  Star Alliance Virtual, our mission is to create a welcoming environment for everyone. We offer pilots the opportunity to explore the world with our diverse African fleet, free of restrictions. and +15 codeshare partnerships with your favorite Virtual Airlines
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-[#042C64] rounded-full flex items-center justify-center mb-6">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h2 className="mb-4 text-[#042C64]">Our Mission</h2>
+                <h2 className="mb-4 text-[#042C64] font-semibold">Our Mission</h2>
                 <p className="text-gray-700">
                   To provide a professional, realistic, and enjoyable virtual airline experience 
                   that celebrates Egyptian aviation while building lasting friendships within a 
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-[#042C64] rounded-full flex items-center justify-center mb-6">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
-                <h2 className="mb-4 text-[#042C64]">Our Vision</h2>
+                <h2 className="mb-4 text-[#042C64] font-semibold">Our Vision</h2>
                 <p className="text-gray-700">
                   To be recognized as one of the leading virtual airlines in the flight simulation 
                   community, known for our operational excellence, supportive culture, and commitment 
@@ -151,7 +151,7 @@ export default function AboutPage() {
       <section className="py-20 bg-[#042C64] text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="slide-up">
-            <h2 className="mb-12 text-center font-semibold">EAVG by the Numbers</h2>
+            <h2 className="mb-12 text-center font-bold">EAVG by the Numbers</h2>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {statistics.map((stat, i) => (
@@ -179,7 +179,7 @@ export default function AboutPage() {
       <section className="py-20 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="slide-up">
-            <h2 className="mb-8 text-center text-[#042C64] font-semibold">What We Offer</h2>
+            <h2 className="mb-8 text-center text-[#042C64] font-bold">What We Offer</h2>
           </ScrollReveal>
           <div className="space-y-6">
             {offerings.map((offering, i) => (
@@ -187,7 +187,7 @@ export default function AboutPage() {
                 <div className="flex gap-4">
                   <div className="w-2 h-2 bg-[#042C64] rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h3 className="mb-2 text-[#042C64]">{offering.title}</h3>
+                    <h3 className="mb-2 text-[#042C64] font-semibold">{offering.title}</h3>
                     <p className="text-gray-700">{offering.desc}</p>
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal animation="zoom-in">
-            <h2 className="mb-6 text-[#042C64] font-semibold">Ready to Join Our Family?</h2>
+            <h2 className="mb-6 text-[#042C64] font-bold">Ready to Join Our Family?</h2>
             <p className="mb-8 text-gray-700">
               Become part of the EAVG community and start your virtual aviation journey with us today.
             </p>
