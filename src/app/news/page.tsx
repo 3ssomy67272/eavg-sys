@@ -12,7 +12,7 @@ export default function NewsPage() {
   const pilotOfTheMonth = {
     '2026': [
       { month: 'January', name: 'EyadRadwan209', hours: 54, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/eyadradwan209/144/1467299_2.png" },
-      { month: 'February', name: 'TBA', hours: 0, image: null },
+      { month: 'February', name: 'Adam_Ashraf', hours: 22, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'March', name: 'TBA', hours: 0, image: null },
       { month: 'April', name: 'TBA', hours: 0, image: null },
       { month: 'May', name: 'TBA', hours: 0, image: null },
