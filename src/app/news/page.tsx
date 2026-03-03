@@ -88,11 +88,12 @@ export default function NewsPage() {
     {
       topic: 'Pilots Achievements',
       news: [
-        // {
-        //   title: '🌟 February Pilot of the Month (POTM) 🌟',
-        //   date: '1 March 2026',
-        //   summary: `Let's give a huge congratulations to our March Pilot of the Month [someone] in our forum thread ! 🎉👏✈️.`
-        // },
+        {
+          title: '🌟 February Pilot of the Month (POTM) 🌟',
+          date: '3 March 2026',
+          summary: `Not a new face, but a familiar one... known for his passion for flying with EgyptAir, his Funny & Friendly talk, the incredible Shots he gets from his flights, and his constant encouragement others to take to the skies!
+           @Adam | 990VG is waiting for Community Congrats in our forum thread. Please join us in congratulating him on earning Pilot of the Month for February! 🎉✈️.`
+        },
         {
           title: '🌟January Pilot of the Month (POTM)🌟',
           date: '4 February 2026',
