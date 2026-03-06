@@ -25,10 +25,81 @@ export default function EventsPage() {
       startTime: '2026-03-01T16:00:00Z',
       durationMinutes: 250,  // 4:10 hours
       route: 'LFPG -> HECA',
-      aircraft: 'EgyptAir | Boeing 777-300ER',
+      aircraft: `EgyptAir | Boeing 777-300ER`,
       forumLink: 'https://community.infiniteflight.com/t/afklm-va-presents-9th-anniversary-eham-lfpg/1147102',
     },
-    
+    {
+      id: 2,
+      title: 'EgyptAir VG 2026 Ramadan Tour | leg1',
+      startTime: '2026-03-06T00:00:00Z',
+      durationMinutes: 21600,  // 15days
+      route: 'HECA -> VABB',
+      aircraft: `Pilot's Choice`,
+      forumLink: '/join',
+    },
+    {
+      id: 3,
+      title: 'EgyptAir VG 2026 Ramadan Tour | leg2',
+      startTime: '2026-03-06T00:00:00Z',
+      durationMinutes: 21600,  // 15days
+      route: 'VABB -> WIII',
+      aircraft: `Pilot's Choice`,
+      forumLink: '/join',
+    },
+    {
+      id: 4,
+      title: 'EgyptAir VG 2026 Ramadan Tour | leg3',
+      startTime: '2026-03-06T00:00:00Z',
+      durationMinutes: 21600,  // 15days
+      route: 'WIII -> VIDP',
+      aircraft: `Pilot's Choice`,
+      forumLink: '/join',
+    },
+    {
+      id: 5,
+      title: 'EgyptAir VG 2026 Ramadan Tour | leg4',
+      startTime: '2026-03-06T00:00:00Z',
+      durationMinutes: 21600,  // 15days
+      route: 'VIDP -> OEJN',
+      aircraft: `Pilot's Choice`,
+      forumLink: '/join',
+    },
+    {
+      id: 6,
+      title: 'EgyptAir VG 2026 Ramadan Tour | leg5',
+      startTime: '2026-03-06T00:00:00Z',
+      durationMinutes: 21600,  // 15days
+      route: 'OEJN -> LTFM',
+      aircraft: `Pilot's Choice`,
+      forumLink: '/join',
+    },
+    {
+      id: 7,
+      title: 'EgyptAir VG 2026 Ramadan Tour | leg6',
+      startTime: '2026-03-06T00:00:00Z',
+      durationMinutes: 21600,  // 15days
+      route: 'LTFM -> GMMN',
+      aircraft: `Pilot's Choice`,
+      forumLink: '/join',
+    },
+    {
+      id: 8,
+      title: 'EgyptAir VG 2026 Ramadan Tour | leg7',
+      startTime: '2026-03-06T00:00:00Z',
+      durationMinutes: 21600,  // 15days
+      route: 'GMMN -> LATI',
+      aircraft: `Pilot's Choice`,
+      forumLink: '/join',
+    },
+    {
+      id: 9,
+      title: 'EgyptAir VG 2026 Ramadan Tour | leg8',
+      startTime: '2026-03-06T00:00:00Z',
+      durationMinutes: 21600,  // 15days
+      route: 'LATI -> HECA',
+      aircraft: `Pilot's Choice`,
+      forumLink: '/join',
+    },
   ];
 
   useEffect(() => {
