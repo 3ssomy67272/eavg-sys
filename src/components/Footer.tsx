@@ -87,7 +87,7 @@ export default function Footer() {
               <h3 className="mb-4 text-xl font-bold">Community</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="https://community.infiniteflight.com/t/egypt-air-virtual-group-fly-with-pride-fly-with-us-official-thread-2024/899511?" className="text-white/80 hover:text-white transition-colors">
+                  <a href="https://community.infiniteflight.com/t/from-pyramids-to-the-world-egyptair-virtual-group-2026-offcial-thread/" className="text-white/80 hover:text-white transition-colors">
                     IFC Thread
                   </a>
                 </li>

@@ -137,7 +137,7 @@ export default function ContactPage() {
                 title: "Thread",
                 desc: "Post your questions or feedback on our community thread.",
                 link: "Visit Thread →",
-                href: "https://community.infiniteflight.com/t/egypt-air-virtual-group-fly-with-pride-fly-with-us-official-thread-2024/899511?u=egyptairvirtualgroup"
+                href: "https://community.infiniteflight.com/t/from-pyramids-to-the-world-egyptair-virtual-group-2026-offcial-thread/"
               },
               {
                 icon: <Send className="w-8 h-8 text-white" />,
