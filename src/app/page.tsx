@@ -42,7 +42,7 @@ export default function HomePage() {
 
           {/* Main Heading */}
           <h1 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-            Soar Like an African <span className="text-blue-400">Falcon</span> 
+            From <span className="text-blue-400">Pyramids</span> to the World
           </h1>
           
           <div className="relative h-20 md:h-16 flex items-center justify-center mb-12">
