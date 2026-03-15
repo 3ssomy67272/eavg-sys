@@ -100,6 +100,15 @@ export default function EventsPage() {
       aircraft: `Pilot's Choice`,
       forumLink: '/join',
     },
+    {
+      id: 10,
+      title: `Celtic Convergence: St. Patrick’s Day`,
+      startTime: '2026-03-15T17:00:00Z',
+      durationMinutes: 300,  // 5:00 hours
+      route: 'HECA -> EIDW',
+      aircraft: `EgytAir | Boeing B737-800`,
+      forumLink: 'https://community.infiniteflight.com/t/15mar26-celtic-convergence-a-st-patricks-day-celebration-eidw-fly-in-fly-out/',
+    },
   ];
 
   useEffect(() => {
