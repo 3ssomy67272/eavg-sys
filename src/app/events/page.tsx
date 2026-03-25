@@ -109,6 +109,15 @@ export default function EventsPage() {
       aircraft: `EgytAir | Boeing B737-800`,
       forumLink: 'https://community.infiniteflight.com/t/15mar26-celtic-convergence-a-st-patricks-day-celebration-eidw-fly-in-fly-out/',
     },
+    {
+      id: 11,
+      title: `EAVG Represents: NEW BEGINNINGS | Cairo FLY OUT`,
+      startTime: '2026-04-19T17:00:00Z',
+      durationMinutes: 300,  // 5:00 hours
+      route: 'HECA -> TBA',
+      aircraft: `TBA`,
+      forumLink: 'https://community.infiniteflight.com/t/19th-april-eavg-represents-new-beginnings/',
+    }
   ];
 
   useEffect(() => {
