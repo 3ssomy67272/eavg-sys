@@ -427,7 +427,7 @@ export default function JoinNowPage() {
                         value={formData.landingViolationRatio}
                         onChange={handleInputChange}
                         required
-                        placeholder="e.g., 3.5:1 or 500 landings / 142 violations"
+                        placeholder="ex: 0.06 or 893 landings / 59 violations"
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#042C64]"
                       />
                       <p className="text-gray-500 mt-1">

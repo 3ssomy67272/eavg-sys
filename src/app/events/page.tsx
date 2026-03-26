@@ -112,7 +112,7 @@ export default function EventsPage() {
     {
       id: 11,
       title: `EAVG Represents: NEW BEGINNINGS | Cairo FLY OUT`,
-      startTime: '2026-04-19T17:00:00Z',
+      startTime: '2026-04-19T16:00:00Z',
       durationMinutes: 300,  // 5:00 hours
       route: 'HECA -> TBA',
       aircraft: `TBA`,

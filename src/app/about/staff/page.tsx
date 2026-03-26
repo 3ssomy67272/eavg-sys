@@ -7,7 +7,7 @@ export default function StaffPage() {
   const staff = [
     {
       id: "2",
-      name: "Hussain Makhdomi",
+      name: "Hussain Makhdoomi",
       position: "Chief Operating Officer",
       image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/hussain_makhdoomi2/144/1565919_2.png",
       bio: "Oversees daily operations and ensures smooth running of all departments.",
