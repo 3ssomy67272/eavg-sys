@@ -117,7 +117,7 @@ export default function EventsPage() {
       route: 'HECA -> EGLL',
       aircraft: `EgyptAir | Boeing 777-300ER`,
       forumLink: 'https://community.infiniteflight.com/t/19th-april-eavg-presents-new-beginnings/1169496',
-    }
+    },
     {
       id: 12,
       title: `Qatari Virtual | 3 Years Anniversary!`,
