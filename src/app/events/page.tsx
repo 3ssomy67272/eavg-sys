@@ -114,10 +114,19 @@ export default function EventsPage() {
       title: `EAVG Represents: NEW BEGINNINGS | Cairo FLY OUT`,
       startTime: '2026-04-19T16:00:00Z',
       durationMinutes: 300,  // 5:00 hours
-      route: 'HECA -> TBA',
-      aircraft: `TBA`,
-      forumLink: 'https://community.infiniteflight.com/t/19th-april-eavg-represents-new-beginnings/',
+      route: 'HECA -> EGLL',
+      aircraft: `EgyptAir | Boeing 777-300ER`,
+      forumLink: 'https://community.infiniteflight.com/t/19th-april-eavg-presents-new-beginnings/1169496',
     }
+    {
+      id: 12,
+      title: `Qatari Virtual | 3 Years Anniversary!`,
+      startTime: '2026-04-18T02:00:00Z',
+      durationMinutes: 900,  // 15:00 hours
+      route: 'SBGR -> OTHH',
+      aircraft: `Qatari | Airbus A350-900`,
+      forumLink: 'https://community.infiniteflight.com/t/qatari-virtual-presents-3-year-anniversary/',
+        }
   ];
 
   useEffect(() => {
