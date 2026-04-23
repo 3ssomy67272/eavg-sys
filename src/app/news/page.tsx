@@ -13,7 +13,7 @@ export default function NewsPage() {
     '2026': [
       { month: 'January', name: 'EyadRadwan209', hours: 54, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/eyadradwan209/144/1467299_2.png" },
       { month: 'February', name: 'Adam_Ashraf', hours: 22, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
-      { month: 'March', name: 'TBA', hours: 0, image: null },
+      { month: 'March', name: 'Adam_Ashraf', hours: 37, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'April', name: 'TBA', hours: 0, image: null },
       { month: 'May', name: 'TBA', hours: 0, image: null },
       { month: 'June', name: 'TBA', hours: 0, image: null },
@@ -68,6 +68,11 @@ export default function NewsPage() {
     {
       topic: 'VA Updates',
       news: [
+        {
+          title: '✈️ New Codeshare Announcement! ✈️',
+          date: '12 April 2026',
+          summary: 'We’re excited to announce a new codeshare partnership with GOL Intelligent Virtual Airlines, bringing a major expansion to our network across South America, North America, and key international destinations. 🤝✨'
+        },
         {
           title: '✈️ Closure of Gulf Airspaces! ✈️',
           date: '28 February 2026',
@@ -240,7 +245,7 @@ export default function NewsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#"
+                href="https://community.infiniteflight.com/t/from-pyramids-to-the-world-egyptair-virtual-group-2026-official-thread"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md hover:bg-white hover:text-[#042C64] transition-colors"
               >
                 IFC thread
