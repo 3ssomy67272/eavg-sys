@@ -21,96 +21,6 @@ export default function EventsPage() {
     // },
     {
       id: 1,
-      title: '9 Years of AFKLM',
-      startTime: '2026-03-01T16:00:00Z',
-      durationMinutes: 250,  // 4:10 hours
-      route: 'LFPG -> HECA',
-      aircraft: `EgyptAir | Boeing 777-300ER`,
-      forumLink: 'https://community.infiniteflight.com/t/afklm-va-presents-9th-anniversary-eham-lfpg/1147102',
-    },
-    {
-      id: 2,
-      title: 'EgyptAir VG 2026 Ramadan Tour | leg1',
-      startTime: '2026-03-06T00:00:00Z',
-      durationMinutes: 21600,  // 15days
-      route: 'HECA -> VABB',
-      aircraft: `Pilot's Choice`,
-      forumLink: '/join',
-    },
-    {
-      id: 3,
-      title: 'EgyptAir VG 2026 Ramadan Tour | leg2',
-      startTime: '2026-03-06T00:00:00Z',
-      durationMinutes: 21600,  // 15days
-      route: 'VABB -> WIII',
-      aircraft: `Pilot's Choice`,
-      forumLink: '/join',
-    },
-    {
-      id: 4,
-      title: 'EgyptAir VG 2026 Ramadan Tour | leg3',
-      startTime: '2026-03-06T00:00:00Z',
-      durationMinutes: 21600,  // 15days
-      route: 'WIII -> VIDP',
-      aircraft: `Pilot's Choice`,
-      forumLink: '/join',
-    },
-    {
-      id: 5,
-      title: 'EgyptAir VG 2026 Ramadan Tour | leg4',
-      startTime: '2026-03-06T00:00:00Z',
-      durationMinutes: 21600,  // 15days
-      route: 'VIDP -> OEJN',
-      aircraft: `Pilot's Choice`,
-      forumLink: '/join',
-    },
-    {
-      id: 6,
-      title: 'EgyptAir VG 2026 Ramadan Tour | leg5',
-      startTime: '2026-03-06T00:00:00Z',
-      durationMinutes: 21600,  // 15days
-      route: 'OEJN -> LTFM',
-      aircraft: `Pilot's Choice`,
-      forumLink: '/join',
-    },
-    {
-      id: 7,
-      title: 'EgyptAir VG 2026 Ramadan Tour | leg6',
-      startTime: '2026-03-06T00:00:00Z',
-      durationMinutes: 21600,  // 15days
-      route: 'LTFM -> GMMN',
-      aircraft: `Pilot's Choice`,
-      forumLink: '/join',
-    },
-    {
-      id: 8,
-      title: 'EgyptAir VG 2026 Ramadan Tour | leg7',
-      startTime: '2026-03-06T00:00:00Z',
-      durationMinutes: 21600,  // 15days
-      route: 'GMMN -> LATI',
-      aircraft: `Pilot's Choice`,
-      forumLink: '/join',
-    },
-    {
-      id: 9,
-      title: 'EgyptAir VG 2026 Ramadan Tour | leg8',
-      startTime: '2026-03-06T00:00:00Z',
-      durationMinutes: 21600,  // 15days
-      route: 'LATI -> HECA',
-      aircraft: `Pilot's Choice`,
-      forumLink: '/join',
-    },
-    {
-      id: 10,
-      title: `Celtic Convergence: St. Patrick’s Day`,
-      startTime: '2026-03-15T17:00:00Z',
-      durationMinutes: 300,  // 5:00 hours
-      route: 'HECA -> EIDW',
-      aircraft: `EgytAir | Boeing B737-800`,
-      forumLink: 'https://community.infiniteflight.com/t/15mar26-celtic-convergence-a-st-patricks-day-celebration-eidw-fly-in-fly-out/',
-    },
-    {
-      id: 11,
       title: `EAVG Represents: NEW BEGINNINGS | Cairo FLY OUT`,
       startTime: '2026-04-19T16:00:00Z',
       durationMinutes: 300,  // 5:00 hours
@@ -119,14 +29,14 @@ export default function EventsPage() {
       forumLink: 'https://community.infiniteflight.com/t/19th-april-eavg-presents-new-beginnings/1169496',
     },
     {
-      id: 12,
+      id: 2,
       title: `Qatari Virtual | 3 Years Anniversary!`,
       startTime: '2026-04-18T02:00:00Z',
       durationMinutes: 900,  // 15:00 hours
       route: 'SBGR -> OTHH',
       aircraft: `Qatari | Airbus A350-900`,
       forumLink: 'https://community.infiniteflight.com/t/qatari-virtual-presents-3-year-anniversary/',
-        }
+    }
   ];
 
   useEffect(() => {
