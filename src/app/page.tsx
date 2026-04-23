@@ -21,9 +21,10 @@ export default function HomePage() {
       >
         {/* Background Image with Zoom Effect */}
         <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-[20000ms] scale-100 hover:scale-100"
+          className="absolute inset-0 bg-cover transition-transform duration-[20000ms] scale-y-[1.1] hover:scale-100"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1742431179550-377d14c97ede?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlZ3lwdGFpciUyMGFpcnBsYW5lJTIwZmxpZ2h0fGVufDF8fHx8MTc2NjcxMDk4Nnww&ixlib=rb-4.1.0&q=80&w=1080)'
+            backgroundImage: 'url(https://i.postimg.cc/bJYzh8FJ/Chat-GPT-Image-Apr-1-2026-06-13-38-AM.png)',
+            backgroundPosition: 'center calc(50% - 25px)'
           }}
         />
         
