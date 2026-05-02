@@ -14,7 +14,7 @@ export default function NewsPage() {
       { month: 'January', name: 'EyadRadwan209', hours: 54, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/eyadradwan209/144/1467299_2.png" },
       { month: 'February', name: 'Adam_Ashraf', hours: 22, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'March', name: 'Adam_Ashraf', hours: 37, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
-      { month: 'April', name: 'TBA', hours: 0, image: null },
+      { month: 'April', name: 'Adam_Ashraf', hours: 90, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'May', name: 'TBA', hours: 0, image: null },
       { month: 'June', name: 'TBA', hours: 0, image: null },
       { month: 'July', name: 'TBA', hours: 0, image: null },
@@ -94,6 +94,11 @@ export default function NewsPage() {
       topic: 'Pilots Achievements',
       news: [
         {
+          title: '🌟 April Pilot of the Month (POTM) 🌟',
+          date: '2 MAY 2026',
+          summary: `Did we just saw a Pilot of the Month who has held this award three times in a row? That’s truly something special, ngl. Please join us in congratulating Captain Adam_Ashraf | 990VG in our forum thread for being April Pilot of the Month (POTM) for the third consecutive month! 👏✈️.`
+        },
+        {
           title: '🌟 February Pilot of the Month (POTM) 🌟',
           date: '3 March 2026',
           summary: `Not a new face, but a familiar one... known for his passion for flying with EgyptAir, his Funny & Friendly talk, the incredible Shots he gets from his flights, and his constant encouragement others to take to the skies!
@@ -108,12 +113,6 @@ export default function NewsPage() {
           title: '🌟December Pilot of the Month (POTM)🌟',
           date: '2 January 2026',
           summary: 'Having only joined EAVG in late November ChrisIF | 248VG has shoqn exceptional dedication and climbed quickly through the ranks. Please join us in congratulating Captain ChrisIF | 248VG  in our forum thread for being December Pilot of the Month (POTM) as well as gaining the last POTM in 2025! 👏✈️.'
-        },
-        {
-          title: '🌟November Pilot of the Month (POTM)🌟',
-          date: '4 December 2025',
-          summary: `When a pilot consistently tracks their progress throughout the month, boom! They earn the title of Pilot of the Month! 🎉
-           Please join us in congratulating Captain Adam Ashraf | 990VG in our forum thread for being November Pilot of the Month (POTM)! 👏✈️.`
         },
       ]
     },

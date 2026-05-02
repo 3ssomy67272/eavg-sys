@@ -91,13 +91,63 @@ export default function PilotRosterPage() {
     },
     {
       id: '9',
-      name: 'Andre-luc_Maran',
+      name: 'André-luc',
       callsign: 'MSR357VG',
       rank: 'Cadet',
       hours: 0,
       location: null,
       joinDate: 'JAN 2026',
       forumProfile: 'https://community.infiniteflight.com/u/Andre-luc_Maran/'
+    },
+    {
+      id: '10',
+      name: 'BIUKE',
+      callsign: 'MSR63VG',
+      rank: 'Cadet',
+      hours: 2,
+      location: "italy",
+      joinDate: 'March 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/CaptainSomalia/'
+    },
+    {
+      id: '11',
+      name: 'Capt_Panjaitan',
+      callsign: 'MSR857VG',
+      rank: 'Cadet',
+      hours: 1,
+      location: null,
+      joinDate: 'February 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Capt_Panjaitan/'
+    },
+    {
+      id: '12',
+      name: 'Ibrahim Dasuki',
+      callsign: 'MSR840VG',
+      rank: 'Cadet',
+      hours: 4,
+      location: 'Egypt',
+      joinDate: 'April 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Ibrahim_Dasuki/'
+    },
+    {
+      id: '13',
+      name: 'Albassel_Ehab',
+      callsign: 'MSR911VG',
+      rank: 'Cadet',
+      hours: 2,
+      location: 'Egypt',
+      joinDate: 'April 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Albassel_Ehab/'
+    },
+    {
+      id: '14',
+      name: 'Mazin_Elkhamisy',
+      callsign: 'MSR995VG',
+      rank: 'Junior Officer',
+      hours: 37,
+      location: 'Egypt',
+      joinDate: 'April 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Mazin_Elkhamisy/'
     },
   ];
 
@@ -168,7 +218,7 @@ export default function PilotRosterPage() {
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-lg text-blue-800 text-sm md:max-w-xs">
                 <Info className="w-4 h-4 flex-shrink-0" />
-                <p>Pilot rosters are monthly updated as the data is not connected to an official database yet.</p>
+                <p>Pilot rosters are monthly updated as the data is not connected to an official database or crewcenter yet.</p>
               </div>
             </div>
           </ScrollReveal>
