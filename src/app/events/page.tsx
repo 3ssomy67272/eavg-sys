@@ -36,6 +36,24 @@ export default function EventsPage() {
       route: 'SBGR -> OTHH',
       aircraft: `Qatari | Airbus A350-900`,
       forumLink: 'https://community.infiniteflight.com/t/qatari-virtual-presents-3-year-anniversary/',
+    },
+    {
+      id: 3,
+      title: `EAVG Presents: 2 Years of Excellence`,
+      startTime: '2026-05-17T15:00:00Z',
+      durationMinutes: 300,  // 5:00 hours
+      route: 'HECA -> LPPT',
+      aircraft: `TBA`,
+      forumLink: 'https://community.infiniteflight.com/t/eavg-presents-2-years-of-excellence-heca/1184832',
+    },
+    {
+      id: 4,
+      title: `ZHVA Presents: May Deep Ploughing - Flying to Guangzhou`,
+      startTime: '2026-05-03T16:00:00Z',
+      durationMinutes: 540,  // 9:00 hours
+      route: 'HECA -> ZGGG',
+      aircraft: `EgyptAir | Boeing 777-300ER`,
+      forumLink: 'https://community.infiniteflight.com/t/3may26-zhva-present-may-deep-ploughing-flying-to-guangzhou-ifvarb-endorsed-zggg-fly-in-out/1171113?u=egyptairvirtualgroup',
     }
   ];
 
