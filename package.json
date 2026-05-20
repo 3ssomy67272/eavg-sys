@@ -2,6 +2,18 @@
   "name": "eavg-sys",
   "version": "0.1.0",
   "private": true,
+  "description": "Welcome to the official systems portal for the **EgyptAir Virtual Group (EAVG)**. This project is a Next.js application designed to manage the entire systems of EgyptAir Virtual Group operations, including VA website, recruitment system, crew center, discord bot, etc...",
+  "homepage": "https://github.com/3ssomy67272/eavg-sys#readme",
+  "bugs": {
+    "url": "https://github.com/3ssomy67272/eavg-sys/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3ssomy67272/eavg-sys.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
