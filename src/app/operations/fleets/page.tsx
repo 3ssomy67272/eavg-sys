@@ -9,10 +9,10 @@ export default function FleetsPage() {
       id: '1',
       name: 'Boeing 777-300ER',
       image: 'https://i.postimg.cc/x1vbkNbs/Screenshot-3.png',
-      count: 6,
+      count: 5,
       range: '7,370 NM',
       speed: 'Mach 0.84',
-      capacity: '503 passengers',
+      capacity: '346 passengers',
       description: null,
       voteUrl: null
     },
@@ -20,10 +20,10 @@ export default function FleetsPage() {
       id: '2',
       name: 'Boeing 787-9 Dreamliner',
       image: 'https://i.postimg.cc/V5yWwy35/Screenshot-4.png',
-      count: 4,
+      count: 8,
       range: '7,635 NM',
       speed: 'Mach 0.85',
-      capacity: '364 passengers',
+      capacity: '309 passengers',
       description: null,
       voteUrl: 'https://community.infiniteflight.com/t/egyptair-boeing-787-9-dreamliner/349791'
     },
@@ -31,10 +31,10 @@ export default function FleetsPage() {
       id: '3',
       name: 'Airbus A330-300',
       image: 'https://i.postimg.cc/DzdGJJRn/Screenshot-6.png',   //https://postimg.cc/delete/LGvPzBgP/536abe24
-      count: 8,
+      count: 4,
       range: '7,262 NM',
       speed: 'Mach 0.82',
-      capacity: '287 passengers',
+      capacity: '301 passengers',
       description: null,
       voteUrl: null
     },
@@ -42,10 +42,10 @@ export default function FleetsPage() {
       id: '4',
       name: 'Airbus A320neo',
       image: 'https://i.postimg.cc/m22rtckg/su-gfp-egyptair-airbus-a320-251n-Planespotters-Net-1844971-7d457066ca-o.jpg',     //https://postimg.cc/delete/x7qdHvxG/42104b30
-      count: 12,
+      count: 8,
       range: '3,300 NM',
       speed: 'Mach 0.78',
-      capacity: '175 passengers',
+      capacity: '142 passengers',
       description: null,
       voteUrl: 'https://community.infiniteflight.com/t/egyptair-airbus-a320neo/876928'
     },
@@ -53,10 +53,10 @@ export default function FleetsPage() {
       id: '5',
       name: 'Airbus A321neo',
       image: 'https://i.postimg.cc/TP8GqhdS/Egytpair-A321N.jpg',    //https://postimg.cc/delete/XtW32dLY/6a278700
-      count: 8,
+      count: 7,
       range: '3,200 NM',
       speed: 'Mach 0.78',
-      capacity: '239 passengers',
+      capacity: '182 passengers',
       description: null,
       voteUrl: 'https://community.infiniteflight.com/t/egyptair-a321neo/943584'
     },
@@ -67,7 +67,7 @@ export default function FleetsPage() {
       count: 30,
       range: '2,935 NM',
       speed: 'Mach 0.78',
-      capacity: '189 passengers',
+      capacity: '144/154 passengers',
       description: null,  
       voteUrl: null
     },
@@ -75,10 +75,10 @@ export default function FleetsPage() {
       id: '7',
       name: 'Airbus A220-300',
       image: 'https://i.postimg.cc/SxbkcJxF/Egytpair-BCS3.jpg',   //https://postimg.cc/delete/ytssj0vD/57c98baa
-      count: 4,
+      count: 12,
       range: '3,600 NM',
       speed: 'Mach 0.78',
-      capacity: '160 passengers',
+      capacity: '140 passengers',
       description: null,
       voteUrl: null
     },
@@ -86,12 +86,34 @@ export default function FleetsPage() {
       id: '8',
       name: 'Airbus A350-900',
       image: 'https://i.postimg.cc/g0nWPvSX/A359.jpg',   //https://postimg.cc/delete/JSBL7Tnp/1e761bfe
-      count: 0,
+      count: 3,
       range: '8,099 NM',
       speed: 'Mach 0.85',
-      capacity: '440 passengers',
+      capacity: '340 passengers',
       description: null,
       voteUrl: 'https://community.infiniteflight.com/t/egyptair-a350-900/1150828'
+    },
+    {
+      id: '9',
+      name: 'Airbus A330-200',
+      image: 'https://i.postimg.cc/zfWctf5z/8390bb2f3a41752eb92d6fe62707c1caa4ce48bc-2-1600x1200.jpg',   //https://postimg.cc/delete/TBj4ZDjn/f6133db3
+      count: 5,
+      range: '7,250 NM',
+      speed: 'Mach 0.82',
+      capacity: '268 passengers',
+      description: null,
+      voteUrl: 'https://community.infiniteflight.com/t/egyptair-airbus-a330-200/1178334'
+    },
+    {
+      id: '10',
+      name: 'Boeing 737 Max 8',
+      image: 'https://i.postimg.cc/MpXTjCw3/su-ggm-egyptair-boeing-737-8-max-Planespotters-Net-1915265-c74c0c2a0a-o.jpg',   //https://postimg.cc/delete/mJ1DNb3b/39ae92af
+      count: 3,
+      range: '3,515 NM',
+      speed: 'Mach 0.78',
+      capacity: '160 passengers',
+      description: null,
+      voteUrl: 'https://community.infiniteflight.com/t/egyptair-boeing-737-max-8/1190055'
     },
   ];
 
@@ -118,7 +140,7 @@ export default function FleetsPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-12 text-center">
             {[
               {
-                value: 8,
+                value: 10,
                 label: "Aircraft Types"
               },
               {
@@ -126,7 +148,7 @@ export default function FleetsPage() {
                 label: "Max Range"
               },
               {
-                value: 440,
+                value: 346,
                 label: "Max Capacity"
               }
             ].map((stat, index) => (
