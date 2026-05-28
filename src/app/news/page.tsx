@@ -63,6 +63,11 @@ export default function NewsPage() {
           date: '15 December 2025',
           summary: 'Due to the shutdown of Digital Crew, EgyptAir Virtual Group (EAVG) will officially move its Crew Center to Atlas. This change is mandatory and affects all pilots..'
         },
+        {
+          title: '🌙 Eid Mubarak from EgyptAir Virtual Group! ✈️',
+          date: '27 MAY 2026',
+          summary: 'On behalf of everyone at EgyptAir Virtual Group, we wish all our pilots, crew, partners, and community members a joyful and blessed Eid. May this special day bring you happiness, peace, and time with the people who matter most.'
+        },
       ]
     },
     {
