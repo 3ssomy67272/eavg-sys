@@ -15,8 +15,8 @@ export default function NewsPage() {
       { month: 'February', name: 'Adam_Ashraf', hours: 22, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'March', name: 'Adam_Ashraf', hours: 37, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'April', name: 'Adam_Ashraf', hours: 90, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
-      { month: 'May', name: 'TBA', hours: 0, image: null },
-      { month: 'June', name: 'TBA', hours: 0, image: null },
+      { month: 'May', name: 'N/A', hours: 0, image: null },
+      { month: 'June', name: 'N/A', hours: 0, image: null },
       { month: 'July', name: 'TBA', hours: 0, image: null },
       { month: 'August', name: 'TBA', hours: 0, image: null },
       { month: 'September', name: 'TBA', hours: 0, image: null },
@@ -75,6 +75,11 @@ export default function NewsPage() {
       news: [
         {
           title: '✈️ New Codeshare Announcement! ✈️',
+          date: '15 June 2026',
+          summary: 'We’re excited to announce a brand-new codeshare partnership with Aegean Airlines, Greece’s flag carrier and one of Europe’s leading regional airlines. 🤝✨'
+        },
+        {
+          title: '✈️ New Codeshare Announcement! ✈️',
           date: '12 April 2026',
           summary: 'We’re excited to announce a new codeshare partnership with GOL Intelligent Virtual Airlines, bringing a major expansion to our network across South America, North America, and key international destinations. 🤝✨'
         },
@@ -87,11 +92,6 @@ export default function NewsPage() {
           title: '✈️ New Codeshare Announcement! ✈️',
           date: '11 January 2026',
           summary: 'We’re excited to announce a new codeshare partnership with Lufty Virtual, expanding our European network with key regional, continental, and long-haul connections operated from Germany’s major hubs. 🤝✨.'
-        },
-        {
-          title: '🚨 Route Termination Notice🚨',
-          date: '27 December 2025',
-          summary: 'Effective Wednesday, January 1, 2025 2:00 AM all Norwegian routes will be terminated.Any PIREPs filed on Norwegian routes after this time will be automatically rejected..'
         },
       ]
     },

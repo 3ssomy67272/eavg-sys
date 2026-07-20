@@ -8,7 +8,7 @@ import CountUp from '@/components/CountUp';
 
 export default function AboutPage() {
   const [statsData, setStatsData] = useState({
-    pilots: 9,
+    pilots: 17,
     routes: 200,
     hours: 1500,
     partners: 21
