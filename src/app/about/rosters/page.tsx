@@ -14,7 +14,7 @@ export default function PilotRosterPage() {
       name: 'Essam Morgan',
       callsign: 'MSR001VG',
       rank: 'Legend',
-      hours: 1889,
+      hours: 1926,
       location: 'Egypt',
       joinDate: 'MAY 2024',
       forumProfile: 'https://community.infiniteflight.com/u/3ssomy167/'
@@ -34,7 +34,7 @@ export default function PilotRosterPage() {
       name: 'Eyad Radwan',
       callsign: 'MSR003VG',
       rank: 'Legend',
-      hours: 1811,
+      hours: 1886,
       location: 'Canada',
       joinDate: 'FEB 2025',
       forumProfile: 'https://community.infiniteflight.com/u/eyadradwan209/'
@@ -44,7 +44,7 @@ export default function PilotRosterPage() {
       name: 'Saleh',
       callsign: 'MSR005VG',
       rank: 'Elite Commander',
-      hours: 887,
+      hours: 908,
       location: 'Egypt',
       joinDate: 'JUL 2025',
       forumProfile: 'https://community.infiniteflight.com/u/_saleh/'
@@ -84,7 +84,7 @@ export default function PilotRosterPage() {
       name: 'André-luc',
       callsign: 'MSR357VG',
       rank: 'First Officer',
-      hours: 71,
+      hours: 73,
       location: null,
       joinDate: 'JAN 2026',
       forumProfile: 'https://community.infiniteflight.com/u/Andre-luc_Maran/'
@@ -94,8 +94,8 @@ export default function PilotRosterPage() {
       name: 'BIUKE',
       callsign: 'MSR63VG',
       rank: 'Cadet',
-      hours: 3,
-      location: "italy",
+      hours: 7,
+      location: "Italy",
       joinDate: 'March 2026',
       forumProfile: 'https://community.infiniteflight.com/u/CaptainSomalia/'
     },
@@ -104,7 +104,7 @@ export default function PilotRosterPage() {
       name: 'Ibrahim Dasuki',
       callsign: 'MSR840VG',
       rank: 'First Officer',
-      hours: 68,
+      hours: 70,
       location: 'Egypt',
       joinDate: 'April 2026',
       forumProfile: 'https://community.infiniteflight.com/u/Ibrahim_Dasuki/'
@@ -174,10 +174,40 @@ export default function PilotRosterPage() {
       name: 'rulizalhafizh',
       callsign: 'MSR093VG',
       rank: 'Junior Officer',
-      hours: 29,
+      hours: 32,
       location: 'Indonesia',
       joinDate: 'JUN 2026',
       forumProfile: 'https://community.infiniteflight.com/u/rulizalhafizh/'
+    },
+    {
+      id: '18',
+      name: 'Mohamed Alaa',
+      callsign: 'MSR121VG',
+      rank: 'Cadet',
+      hours: 1,
+      location: null,
+      joinDate: 'Aug 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Mohamed_Alaa_Sayed/'
+    },
+    {
+      id: '19',
+      name: 'Bashir Saddiq',
+      callsign: 'MSR234VG',
+      rank: 'Cadet',
+      hours: 4,
+      location: null,
+      joinDate: 'Jul 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Hunterxx/'
+    },
+    {
+      id: '20',
+      name: 'Mohamed Abdallah',
+      callsign: 'MSR777VG',
+      rank: 'Cadet',
+      hours: 0,
+      location: 'Egypt',
+      joinDate: 'Aug 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/sphinx/'
     },
   ];
 
