@@ -187,15 +187,7 @@ export default function HomePage() {
           <ScrollReveal animation="zoom-in">
             <div className="text-center">
               <h2 className="mb-6 text-[#042C64] font-semibold">Live Flight Tracking</h2>
-              <div className="bg-gray-100 rounded-lg p-16 border-2 border-dashed border-gray-300">
-                <Globe className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-500">
-                  Live Map – Coming Soon
-                </p>
-                <p className="text-gray-400 mt-2">
-                  Track active EAVG pilots in real-time across the globe
-                </p>
-              </div>
+                              <iframe src="https://waypoint-live.app/embed/va/egyptair-virtual-group?hub=HECA&basemap=light&lf=callsign%2Cva&color=134dfb&st=0&ln=1&rd=2&tb=1" width="100%" height="600" loading="lazy" title="Live flights"></iframe>
             </div>
           </ScrollReveal>
         </div>

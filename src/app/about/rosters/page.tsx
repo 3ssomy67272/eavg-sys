@@ -1,195 +1,74 @@
 "use client";
 
-import { useState } from 'react';
-import { Search, ExternalLink, MapPin, Clock, Info } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Search, ExternalLink, MapPin, Clock } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
+import { getMembers, getPilotRanks } from '@/lib/atlas/client';
 
 export default function PilotRosterPage() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [pilots, setPilots] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  //  manual data input. to be linked with VA's future database
-  const pilots = [
-    {
-      id: '1',
-      name: 'Essam Morgan',
-      callsign: 'MSR001VG',
-      rank: 'Legend',
-      hours: 1889,
-      location: 'Egypt',
-      joinDate: 'MAY 2024',
-      forumProfile: 'https://community.infiniteflight.com/u/3ssomy167/'
-    },
-    {
-      id: '2',
-      name: 'Hussain Makhdoomi',
-      callsign: 'MSR002VG',
-      rank: 'Chief Pilot',
-      hours: 1318,
-      location: 'India',
-      joinDate: 'FEB 2024',
-      forumProfile: 'https://community.infiniteflight.com/u/hussain_makhdoomi2/'
-    },
-    {
-      id: '3',
-      name: 'Eyad Radwan',
-      callsign: 'MSR003VG',
-      rank: 'Legend',
-      hours: 1811,
-      location: 'Canada',
-      joinDate: 'FEB 2025',
-      forumProfile: 'https://community.infiniteflight.com/u/eyadradwan209/'
-    },
-    {
-      id: '4',
-      name: 'Saleh',
-      callsign: 'MSR005VG',
-      rank: 'Elite Commander',
-      hours: 887,
-      location: 'Egypt',
-      joinDate: 'JUL 2025',
-      forumProfile: 'https://community.infiniteflight.com/u/_saleh/'
-    },
-    {
-      id: '5',
-      name: 'SirMJ9',
-      callsign: 'MSR009VG',
-      rank: 'Elite Commander',
-      hours: 770,
-      location: 'Egypt',
-      joinDate: 'MAY 2024',
-      forumProfile: 'https://community.infiniteflight.com/u/sirmj9/'
-    },
-    {
-      id: '6',
-      name: 'Vasto Lorde',
-      callsign: 'MSR271VG',
-      rank: 'First Officer',
-      hours: 74,
-      location: null,
-      joinDate: 'JUL 2025',
-      forumProfile: 'https://community.infiniteflight.com/u/ban-kai/'
-    },
-    {
-      id: '7',
-      name: 'Adam Ashraf',
-      callsign: 'MSR990VG',
-      rank: 'Commander',
-      hours: 551,
-      location: "Egypt",
-      joinDate: 'SEP 2025',
-      forumProfile: 'https://community.infiniteflight.com/u/adam_ashraf/'
-    },
-    {
-      id: '8',
-      name: 'André-luc',
-      callsign: 'MSR357VG',
-      rank: 'First Officer',
-      hours: 71,
-      location: null,
-      joinDate: 'JAN 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/Andre-luc_Maran/'
-    },
-    {
-      id: '9',
-      name: 'BIUKE',
-      callsign: 'MSR63VG',
-      rank: 'Cadet',
-      hours: 3,
-      location: "italy",
-      joinDate: 'March 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/CaptainSomalia/'
-    },
-    {
-      id: '10',
-      name: 'Ibrahim Dasuki',
-      callsign: 'MSR840VG',
-      rank: 'First Officer',
-      hours: 68,
-      location: 'Egypt',
-      joinDate: 'April 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/Ibrahim_Dasuki/'
-    },
-    {
-      id: '11',
-      name: 'Albassel_Ehab',
-      callsign: 'MSR911VG',
-      rank: 'Cadet',
-      hours: 2,
-      location: 'Egypt',
-      joinDate: 'April 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/Albassel_Ehab/'
-    },
-    {
-      id: '12',
-      name: 'Mazin_Elkhamisy',
-      callsign: 'MSR995VG',
-      rank: 'Junior Officer',
-      hours: 37,
-      location: 'Egypt',
-      joinDate: 'April 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/Mazin_Elkhamisy/'
-    },
-    {
-      id: '13',
-      name: 'Mina Boushra',
-      callsign: 'MSR011VG',
-      rank: 'Cadet',
-      hours: 0,
-      location: 'United Arab Emirates',
-      joinDate: 'APR 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/Mina_Boushra/'
-    },
-    {
-      id: '14',
-      name: 'Aymane Belkadi',
-      callsign: 'MSR343VG',
-      rank: 'Cadet',
-      hours: 2,
-      location: 'Morocco',
-      joinDate: 'MAY 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/Aymane_Belkadi/'
-    },
-    {
-      id: '15',
-      name: 'Eddiel',
-      callsign: 'MSR324VG',
-      rank: 'Cadet',
-      hours: 0,
-      location: null,
-      joinDate: 'MAY 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/Eddiel2//'
-    },
-    {
-      id: '16',
-      name: 'Mahmoud Waleed',
-      callsign: 'MSR791VG',
-      rank: 'Cadet',
-      hours: 3,
-      location: null,
-      joinDate: 'MAY 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/Mahmoud_Aviation/'
-    },
-    {
-      id: '17',
-      name: 'rulizalhafizh',
-      callsign: 'MSR093VG',
-      rank: 'Junior Officer',
-      hours: 29,
-      location: 'Indonesia',
-      joinDate: 'JUN 2026',
-      forumProfile: 'https://community.infiniteflight.com/u/rulizalhafizh/'
-    },
-  ];
+  useEffect(() => {
+    const fetchRoster = async () => {
+      try {
+        setLoading(true);
 
-  // search filter
+        const [members, ranks] = await Promise.all([
+          getMembers(),
+          getPilotRanks(),
+        ]);
+
+        const rankMap = new Map<number, string>();
+        for (const rank of ranks) {
+          rankMap.set(rank.id, rank.name);
+        }
+
+        const activePilots = members
+          .filter((m: any) => !m.retired && !m.revoked)
+          .map((m: any) => {
+            const joinDate = m.joinDate
+              ? new Date(m.joinDate).toLocaleDateString('en-US', {
+                  month: 'short',
+                  year: 'numeric',
+                }).toUpperCase()
+              : 'N/A';
+
+            const forumProfile = m.User?.infiniteFlightName
+              ? `https://community.infiniteflight.com/u/${m.User.infiniteFlightName}/`
+              : null;
+
+            return {
+              id: m.id,
+              name: m.User?.name || 'Unknown',
+              callsign: m.callsign || 'N/A',
+              rank: rankMap.get(m.rankID) || 'Unknown',
+              hours: Math.round(m.flightTime / 60) || 0,
+              // location: m.hub || null,
+              joinDate,
+              forumProfile,
+            };
+          });
+
+        setPilots(activePilots);
+      } catch (error) {
+        console.error("Error fetching roster:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRoster();
+  }, []);
+
   const filteredPilots = pilots.filter(pilot =>
     pilot.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     pilot.callsign.toLowerCase().includes(searchTerm.toLowerCase()) ||
     (pilot.location?.toLowerCase() || "").includes(searchTerm.toLowerCase()) ||
     pilot.rank.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  // Sort by callsign descending
+// {*Sort by Callsign decending*}
   const sortedPilots = [...filteredPilots].sort((a, b) => a.callsign.localeCompare(b.callsign));
 
   return (
@@ -202,7 +81,7 @@ export default function PilotRosterPage() {
           </ScrollReveal>
           <ScrollReveal animation="slide-up" delay={200}>
             <p className="max-w-2xl mx-auto text-lg opacity-90">
-              Meet our community of dedicated virtual pilots from around the world. 
+              Meet our community of dedicated virtual pilots from around the world.
               Click on any pilot's name to visit their forum profile.
             </p>
           </ScrollReveal>
@@ -217,7 +96,7 @@ export default function PilotRosterPage() {
               { label: "Active Pilots", value: pilots.length },
               { label: "Total Hours", value: pilots.reduce((sum, p) => sum + p.hours, 0).toLocaleString() },
               { label: "Countries", value: new Set(pilots.map(p => p.location)).size },
-              { label: "Avg Hours/Pilot", value: Math.round(pilots.reduce((sum, p) => sum + p.hours, 0) / pilots.length) }
+              { label: "Avg Hours/Pilot", value: Math.round(pilots.reduce((sum, p) => sum + p.hours, 0) / (pilots.length || 1)) }
             ].map((stat, index) => (
               <ScrollReveal key={index} animation="slide-up" delay={index * 100}>
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
@@ -246,122 +125,139 @@ export default function PilotRosterPage() {
                   className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-[#042C64] shadow-sm transition-all"
                 />
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-lg text-blue-800 text-sm md:max-w-xs">
-                <Info className="w-4 h-4 flex-shrink-0" />
-                <p>Pilot rosters are monthly updated as the data is not connected to an official database or crewcenter yet.</p>
-              </div>
             </div>
           </ScrollReveal>
 
-          {/* Mobile View - Cards */}
-          <div className="md:hidden space-y-4">
-            {sortedPilots.map((pilot, index) => (
-              <ScrollReveal key={pilot.id} animation="slide-up" delay={index * 50}>
-                <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <a
-                        href={pilot.forumProfile}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-lg font-bold text-[#042C64] hover:underline flex items-center gap-2"
-                      >
-                        {pilot.name}
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                      <p className="text-[#042C64]/70 font-semibold">{pilot.callsign}</p>
-                    </div>
-                    <span className="bg-[#042C64] text-white px-4 py-1 rounded-full text-sm font-bold">
-                      {pilot.hours}h
-                    </span>
-                  </div>
-                  <div className="space-y-3 text-gray-600">
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-gray-400" />
-                      <span className="text-sm font-medium">{pilot.location}</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Clock className="w-4 h-4 text-gray-400" />
-                      <span className="text-sm font-medium">Joined {pilot.joinDate}</span>
-                    </div>
-                    <div className="pt-2">
-                      <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-1">Rank</span>
-                      <p className="text-sm font-semibold text-gray-800">{pilot.rank}</p>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Desktop View - Table */}
-          <div className="hidden md:block">
-            <ScrollReveal animation="fade-in">
-              <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
-                <table className="w-full border-collapse bg-white">
-                  <thead>
-                    <tr className="bg-[#042C64] text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Rank</th>
-                      <th className="px-6 py-4 text-left font-semibold">Pilot Name</th>
-                      <th className="px-6 py-4 text-left font-semibold">Callsign</th>
-                      <th className="px-6 py-4 text-left font-semibold">Flight Hours</th>
-                      <th className="px-6 py-4 text-left font-semibold">Location</th>
-                      <th className="px-6 py-4 text-left font-semibold">Join Date</th>
-                      <th className="px-6 py-4 text-left font-semibold">Profile</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {sortedPilots.map((pilot, index) => (
-                      <tr
-                        key={pilot.id}
-                        className={`border-b border-gray-100 hover:bg-gray-50/80 transition-colors ${
-                          index % 2 === 0 ? 'bg-white' : 'bg-gray-50/40'
-                        }`}
-                      >
-                        <td className="px-6 py-4 text-gray-700 font-medium">{pilot.rank}</td>
-                        <td className="px-6 py-4 font-bold text-gray-900">{pilot.name}</td>
-                        <td className="px-6 py-4 text-gray-600 font-semibold">{pilot.callsign}</td>
-                        <td className="px-6 py-4">
-                          <span className="bg-[#042C64]/10 text-[#042C64] px-4 py-1 rounded-full text-sm font-bold">
-                            {pilot.hours} hours
-                          </span>
-                        </td>
-                        <td className="px-6 py-4 text-gray-600 font-medium">{pilot.location}</td>
-                        <td className="px-6 py-4 text-gray-500">{pilot.joinDate}</td>
-                        <td className="px-6 py-4">
-                          <a
-                            href={pilot.forumProfile}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-[#042C64] hover:text-blue-700 transition-colors flex items-center gap-1 font-semibold"
-                          >
-                            View
-                            <ExternalLink className="w-4 h-4" />
-                          </a>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          {filteredPilots.length === 0 && (
-            <ScrollReveal animation="fade-in">
-              <div className="text-center py-16 bg-gray-50 rounded-xl border-2 border-dashed border-gray-200 mt-8">
-                <p className="text-gray-500 font-medium">No pilots found matching your search criteria.</p>
-              </div>
-            </ScrollReveal>
-          )}
-
-          <ScrollReveal animation="slide-up">
-            <div className="mt-8 text-center">
-              <p className="text-gray-500 font-medium bg-gray-100 inline-block px-4 py-2 rounded-full text-sm">
-                Showing <span className="text-[#042C64] font-bold">{filteredPilots.length}</span> of <span className="text-[#042C64] font-bold">{pilots.length}</span> active pilots
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#042C64]"></div>
+              <p className="mt-4 text-gray-600 font-medium">
+                Loading roster...
               </p>
             </div>
-          </ScrollReveal>
+          ) : (
+            <>
+              {/* Mobile View - Cards */}
+              <div className="md:hidden space-y-4">
+                {sortedPilots.map((pilot, index) => (
+                  <ScrollReveal key={pilot.id} animation="slide-up" delay={index * 50}>
+                    <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          {pilot.forumProfile ? (
+                            <a
+                              href={pilot.forumProfile}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-lg font-bold text-[#042C64] hover:underline flex items-center gap-2"
+                            >
+                              {pilot.name}
+                              <ExternalLink className="w-4 h-4" />
+                            </a>
+                          ) : (
+                            <span className="text-lg font-bold text-[#042C64]">
+                              {pilot.name}
+                            </span>
+                          )}
+                          <p className="text-[#042C64]/70 font-semibold">{pilot.callsign}</p>
+                        </div>
+                        <span className="bg-[#042C64] text-white px-4 py-1 rounded-full text-sm font-bold">
+                          {pilot.hours}h
+                        </span>
+                      </div>
+                      <div className="space-y-3 text-gray-600">
+                        <div className="flex items-center gap-3">
+                          <MapPin className="w-4 h-4 text-gray-400" />
+                          <span className="text-sm font-medium">{pilot.location || 'N/A'}</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <Clock className="w-4 h-4 text-gray-400" />
+                          <span className="text-sm font-medium">Joined {pilot.joinDate}</span>
+                        </div>
+                        <div className="pt-2">
+                          <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-1">Rank</span>
+                          <p className="text-sm font-semibold text-gray-800">{pilot.rank}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+
+              {/* Desktop View - Table */}
+              <div className="hidden md:block">
+                <ScrollReveal animation="fade-in">
+                  <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+                    <table className="w-full border-collapse bg-white">
+                      <thead>
+                        <tr className="bg-[#042C64] text-white">
+                          <th className="px-6 py-4 text-left font-semibold">Rank</th>
+                          <th className="px-6 py-4 text-left font-semibold">Pilot Name</th>
+                          <th className="px-6 py-4 text-left font-semibold">Callsign</th>
+                          <th className="px-6 py-4 text-left font-semibold">Flight Hours</th>
+                          <th className="px-6 py-4 text-left font-semibold">Location</th>
+                          <th className="px-6 py-4 text-left font-semibold">Join Date</th>
+                          <th className="px-6 py-4 text-left font-semibold">Profile</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {sortedPilots.map((pilot, index) => (
+                          <tr
+                            key={pilot.id}
+                            className={`border-b border-gray-100 hover:bg-gray-50/80 transition-colors ${
+                              index % 2 === 0 ? 'bg-white' : 'bg-gray-50/40'
+                            }`}
+                          >
+                            <td className="px-6 py-4 text-gray-700 font-medium">{pilot.rank}</td>
+                            <td className="px-6 py-4 font-bold text-gray-900">{pilot.name}</td>
+                            <td className="px-6 py-4 text-gray-600 font-semibold">{pilot.callsign}</td>
+                            <td className="px-6 py-4">
+                              <span className="bg-[#042C64]/10 text-[#042C64] px-4 py-1 rounded-full text-sm font-bold">
+                                {pilot.hours} hours
+                              </span>
+                            </td>
+                            <td className="px-6 py-4 text-gray-600 font-medium">{pilot.location || 'N/A'}</td>
+                            <td className="px-6 py-4 text-gray-500">{pilot.joinDate}</td>
+                            <td className="px-6 py-4">
+                              {pilot.forumProfile ? (
+                                <a
+                                  href={pilot.forumProfile}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-[#042C64] hover:text-blue-700 transition-colors flex items-center gap-1 font-semibold"
+                                >
+                                  View
+                                  <ExternalLink className="w-4 h-4" />
+                                </a>
+                              ) : (
+                                <span className="text-gray-400">—</span>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </ScrollReveal>
+              </div>
+
+              {filteredPilots.length === 0 && (
+                <ScrollReveal animation="fade-in">
+                  <div className="text-center py-16 bg-gray-50 rounded-xl border-2 border-dashed border-gray-200 mt-8">
+                    <p className="text-gray-500 font-medium">No pilots found matching your search criteria.</p>
+                  </div>
+                </ScrollReveal>
+              )}
+
+              <ScrollReveal animation="slide-up">
+                <div className="mt-8 text-center">
+                  <p className="text-gray-500 font-medium bg-gray-100 inline-block px-4 py-2 rounded-full text-sm">
+                    Showing <span className="text-[#042C64] font-bold">{filteredPilots.length}</span> of <span className="text-[#042C64] font-bold">{pilots.length}</span> active pilots
+                  </p>
+                </div>
+              </ScrollReveal>
+            </>
+          )}
         </div>
       </section>
 

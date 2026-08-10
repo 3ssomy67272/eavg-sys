@@ -39,11 +39,11 @@ export default function StaffPage() {
     },
     {
       id: "5",
-      name: "SirMj9",
-      position: "Head External Affairs",
-      image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/sirmj9/144/1297381_2.png",
+      name: "Vecant",
+      position: "Head of External Affairs",
+      image: "👩‍✈️",
       bio: "Helps Event Manger in planning and coordinating events with other Virtual Airlines.",
-      url: "https://community.infiniteflight.com/u/sirmj9/",
+      url: "#",
     },
     {
       id: "6",
