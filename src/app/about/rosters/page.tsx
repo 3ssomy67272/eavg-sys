@@ -10,6 +10,7 @@ export default function PilotRosterPage() {
   const [pilots, setPilots] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
+<<<<<<< HEAD
   useEffect(() => {
     const fetchRoster = async () => {
       try {
@@ -61,6 +62,211 @@ export default function PilotRosterPage() {
 
     fetchRoster();
   }, []);
+=======
+  //  manual data input. to be linked with VA's future database
+  const pilots = [
+    {
+      id: '1',
+      name: 'Essam Morgan',
+      callsign: 'MSR001VG',
+      rank: 'Legend',
+      hours: 1926,
+      location: 'Egypt',
+      joinDate: 'MAY 2024',
+      forumProfile: 'https://community.infiniteflight.com/u/3ssomy167/'
+    },
+    {
+      id: '2',
+      name: 'Hussain Makhdoomi',
+      callsign: 'MSR002VG',
+      rank: 'Chief Pilot',
+      hours: 1318,
+      location: 'India',
+      joinDate: 'FEB 2024',
+      forumProfile: 'https://community.infiniteflight.com/u/hussain_makhdoomi2/'
+    },
+    {
+      id: '3',
+      name: 'Eyad Radwan',
+      callsign: 'MSR003VG',
+      rank: 'Legend',
+      hours: 1886,
+      location: 'Canada',
+      joinDate: 'FEB 2025',
+      forumProfile: 'https://community.infiniteflight.com/u/eyadradwan209/'
+    },
+    {
+      id: '4',
+      name: 'Saleh',
+      callsign: 'MSR005VG',
+      rank: 'Elite Commander',
+      hours: 908,
+      location: 'Egypt',
+      joinDate: 'JUL 2025',
+      forumProfile: 'https://community.infiniteflight.com/u/_saleh/'
+    },
+    {
+      id: '5',
+      name: 'SirMJ9',
+      callsign: 'MSR009VG',
+      rank: 'Elite Commander',
+      hours: 770,
+      location: 'Egypt',
+      joinDate: 'MAY 2024',
+      forumProfile: 'https://community.infiniteflight.com/u/sirmj9/'
+    },
+    {
+      id: '6',
+      name: 'Vasto Lorde',
+      callsign: 'MSR271VG',
+      rank: 'First Officer',
+      hours: 74,
+      location: null,
+      joinDate: 'JUL 2025',
+      forumProfile: 'https://community.infiniteflight.com/u/ban-kai/'
+    },
+    {
+      id: '7',
+      name: 'Adam Ashraf',
+      callsign: 'MSR990VG',
+      rank: 'Commander',
+      hours: 551,
+      location: "Egypt",
+      joinDate: 'SEP 2025',
+      forumProfile: 'https://community.infiniteflight.com/u/adam_ashraf/'
+    },
+    {
+      id: '8',
+      name: 'André-luc',
+      callsign: 'MSR357VG',
+      rank: 'First Officer',
+      hours: 73,
+      location: null,
+      joinDate: 'JAN 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Andre-luc_Maran/'
+    },
+    {
+      id: '9',
+      name: 'BIUKE',
+      callsign: 'MSR63VG',
+      rank: 'Cadet',
+      hours: 7,
+      location: "Italy",
+      joinDate: 'March 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/CaptainSomalia/'
+    },
+    {
+      id: '10',
+      name: 'Ibrahim Dasuki',
+      callsign: 'MSR840VG',
+      rank: 'First Officer',
+      hours: 70,
+      location: 'Egypt',
+      joinDate: 'April 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Ibrahim_Dasuki/'
+    },
+    {
+      id: '11',
+      name: 'Albassel_Ehab',
+      callsign: 'MSR911VG',
+      rank: 'Cadet',
+      hours: 2,
+      location: 'Egypt',
+      joinDate: 'April 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Albassel_Ehab/'
+    },
+    {
+      id: '12',
+      name: 'Mazin_Elkhamisy',
+      callsign: 'MSR995VG',
+      rank: 'Junior Officer',
+      hours: 37,
+      location: 'Egypt',
+      joinDate: 'April 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Mazin_Elkhamisy/'
+    },
+    {
+      id: '13',
+      name: 'Mina Boushra',
+      callsign: 'MSR011VG',
+      rank: 'Cadet',
+      hours: 0,
+      location: 'United Arab Emirates',
+      joinDate: 'APR 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Mina_Boushra/'
+    },
+    {
+      id: '14',
+      name: 'Aymane Belkadi',
+      callsign: 'MSR343VG',
+      rank: 'Cadet',
+      hours: 2,
+      location: 'Morocco',
+      joinDate: 'MAY 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Aymane_Belkadi/'
+    },
+    {
+      id: '15',
+      name: 'Eddiel',
+      callsign: 'MSR324VG',
+      rank: 'Cadet',
+      hours: 0,
+      location: null,
+      joinDate: 'MAY 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Eddiel2//'
+    },
+    {
+      id: '16',
+      name: 'Mahmoud Waleed',
+      callsign: 'MSR791VG',
+      rank: 'Cadet',
+      hours: 3,
+      location: null,
+      joinDate: 'MAY 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Mahmoud_Aviation/'
+    },
+    {
+      id: '17',
+      name: 'rulizalhafizh',
+      callsign: 'MSR093VG',
+      rank: 'Junior Officer',
+      hours: 32,
+      location: 'Indonesia',
+      joinDate: 'JUN 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/rulizalhafizh/'
+    },
+    {
+      id: '18',
+      name: 'Mohamed Alaa',
+      callsign: 'MSR121VG',
+      rank: 'Cadet',
+      hours: 1,
+      location: null,
+      joinDate: 'Aug 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Mohamed_Alaa_Sayed/'
+    },
+    {
+      id: '19',
+      name: 'Bashir Saddiq',
+      callsign: 'MSR234VG',
+      rank: 'Cadet',
+      hours: 4,
+      location: null,
+      joinDate: 'Jul 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/Hunterxx/'
+    },
+    {
+      id: '20',
+      name: 'Mohamed Abdallah',
+      callsign: 'MSR777VG',
+      rank: 'Cadet',
+      hours: 0,
+      location: 'Egypt',
+      joinDate: 'Aug 2026',
+      forumProfile: 'https://community.infiniteflight.com/u/sphinx/'
+    },
+  ];
+>>>>>>> 1a5b3e322b05bf2d7b763961111557044f9a156b
 
   const filteredPilots = pilots.filter(pilot =>
     pilot.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
