@@ -8,7 +8,7 @@ export default function EventsPage() {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   // Manual Event Data until linked we create a database and link when the system fully ready
-  const events = [
+  const events: {
     // Example Event copy the template and fill the details as needed. don't forget to remove slashes
     // {
     //   id: number,
@@ -19,7 +19,14 @@ export default function EventsPage() {
     //   aircraft: 'aircraft',
     //   forumLink: 'event link',
     // },
-  ];
+    id: number;
+    title: string;
+    startTime: string;
+    durationMinutes: number;
+    route: string;
+    aircraft: string;
+    forumLink: string;
+  }[] = [];
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentTime(new Date()), 60000); // Update every minute
