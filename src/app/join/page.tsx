@@ -17,9 +17,13 @@ export default function JoinNowPage() {
     ifcGrade: '',
     landingViolationRatio: '',
     heardFromIFC: false,
+    heardFromTracker: false,
+    heardFromLive: false,
     heardFromOther: ''
   });
 
+
+  // Handle input changes for form fields
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -35,7 +39,7 @@ export default function JoinNowPage() {
   const handlePrevPage = () => {
     setFormPage(prev => prev - 1);
   };
-
+// application submission listener
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -56,7 +60,7 @@ export default function JoinNowPage() {
             { name: "IFC Name", value: formData.ifcName, inline: true },
             { name: "IFC Grade", value: formData.ifcGrade, inline: true },
             { name: "Landing/Violation Ratio", value: formData.landingViolationRatio, inline: true },
-            { name: "How did you hear about us?", value: formData.heardFromIFC ? 'IFC Thread' : formData.heardFromOther, inline: false },
+            { name: "How did you hear about us?", value: [formData.heardFromIFC ? 'IFC Thread. ' : null, formData.heardFromTracker ? '3rd party Tracker. ' : null, formData.heardFromLive ? 'Live Fleet. ' : null, formData.heardFromOther ? formData.heardFromOther : null].filter(Boolean).join(' • '), inline: false },
             { name: "Actions", value: `✅ [Approve Applicant](${approveRedirectUrl}) • 👤 [View IFC Profile](${ifcProfileUrl})`, inline: false }
           ],
           footer: {
@@ -115,6 +119,8 @@ export default function JoinNowPage() {
       ifcGrade: '',
       landingViolationRatio: '',
       heardFromIFC: false,
+      heardFromTracker: false,
+      heardFromLive: false,
       heardFromOther: ''
     });
   };
@@ -122,7 +128,7 @@ export default function JoinNowPage() {
   const isPage1Valid = formData.pilotName && formData.email && formData.age;
   const isPage2Valid = formData.ifcName && formData.ifcGrade;
   const isPage3Valid = formData.landingViolationRatio;
-  const isPage4Valid = formData.heardFromIFC || formData.heardFromOther;
+  const isPage4Valid = formData.heardFromIFC || formData.heardFromTracker || formData.heardFromLive || formData.heardFromOther;
 
   return (
     <div className="min-h-screen bg-white">
@@ -465,8 +471,7 @@ export default function JoinNowPage() {
 
                 {/* Page 4: How did you hear about us */}
                 {formPage === 4 && (
-                  <div className="space-y-6">
-                    <div>
+                  <div className="space-y-6"><div>
                       <label className="block text-gray-700 mb-3">
                         How did you hear about us? *
                       </label>
@@ -481,6 +486,28 @@ export default function JoinNowPage() {
                             className="w-5 h-5 text-[#042C64] border-gray-300 rounded focus:ring-[#042C64]"
                           />
                           <span>IFC Thread (Infinite Flight Community)</span>
+                        </label>
+
+                        <label className="flex items-center gap-3 p-3 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50">
+                          <input
+                            type="checkbox"
+                            name="heardFromTracker"
+                            checked={formData.heardFromTracker}
+                            onChange={handleInputChange}
+                            className="w-5 h-5 text-[#042C64] border-gray-300 rounded focus:ring-[#042C64]"
+                          />
+                          <span>Waypoint Tracker</span>
+                        </label>
+
+                        <label className="flex items-center gap-3 p-3 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50">
+                          <input
+                            type="checkbox"
+                            name="heardFromLive"
+                            checked={formData.heardFromLive}
+                            onChange={handleInputChange}
+                            className="w-5 h-5 text-[#042C64] border-gray-300 rounded focus:ring-[#042C64]"
+                          />
+                          <span>Parked Aircraft</span>
                         </label>
 
                         <div>

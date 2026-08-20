@@ -6,10 +6,9 @@ export async function POST(request: Request) {
     
     let webhookUrl;
     if (type === 'contact') {
-      webhookUrl = process.env.CONTACT_WEBHOOK_URL || process.env.NEXT_PUBLIC_CONTACT_WEBHOOK_URL;
+      webhookUrl = process.env.CONTACT_WEBHOOK_URL;
     } else {
-      // Default to application webhook for backward compatibility
-      webhookUrl = process.env.DISCORD_WEBHOOK_URL || process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL;
+      webhookUrl = process.env.DISCORD_WEBHOOK_URL;
     }
 
     if (!webhookUrl || webhookUrl === 'YOUR_CONTACT_WEBHOOK_URL_HERE') {
