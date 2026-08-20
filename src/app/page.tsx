@@ -188,7 +188,7 @@ export default function HomePage() {
             <div className="text-center">
               <h2 className="mb-6 text-[#042C64] font-semibold">Live Flight Tracking</h2>
               <div className="drop-shadow-2xl rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                <iframe src="https://waypoint-live.app/embed/va/egyptair-virtual-group?hub=HECA&basemap=light&lf=callsign%2Cva&color=134dfb&st=0&ln=1&rd=2&tb=1" width="100%" height="600" loading="lazy" title="Live flights"></iframe>
+                <iframe src="https://waypoint-live.app/embed/va/egyptair-virtual-group?hub=HECA&basemap=light&lf=callsign%2Cva&color=134dfb&st=0&ln=1&rd=2&tb=1" width="100%" height="600" title="Live flights"></iframe>
               </div>
             </div>
           </ScrollReveal>
