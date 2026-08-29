@@ -8,7 +8,7 @@ export default function EventsPage() {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   // Manual Event Data until linked we create a database and link when the system fully ready
-  const events: {
+  const events: {id: number; title: string; startTime: string; durationMinutes: number; route: string; aircraft: string; forumLink: string;}[] = 
     // Example Event copy the template and fill the details as needed. don't forget to remove slashes
     // {
     //   id: number,
@@ -19,14 +19,27 @@ export default function EventsPage() {
     //   aircraft: 'aircraft',
     //   forumLink: 'event link',
     // },
-    id: number;
-    title: string;
-    startTime: string;
-    durationMinutes: number;
-    route: string;
-    aircraft: string;
-    forumLink: string;
-  }[] = [];
+      
+    [
+      {
+        id: 1,
+        title: 'One Routation Over Archipelago',
+        startTime: '2026-09-01T16:00:00Z',
+        durationMinutes: 120,    // 2 hours
+        route: 'LGIR - LGAV',
+        aircraft: 'Agean | Airbus A320',
+        forumLink: 'https://community.infiniteflight.com/t/01sep26-one-rotation-over-the-archipelago-aegean-virtual-s-1st-anniversary/1255972/',
+      },
+      {
+        id: 2,
+        title: 'Norwegian 7th Anniversary Flyout',
+        startTime: '2026-09-18T13:00:00Z',
+        durationMinutes: 120,    // 2 hours
+        route: 'TBA',
+        aircraft: 'TBA',
+        forumLink: 'https://community.infiniteflight.com/t/18sep26-norwegian-air-virtual-7th-anniversary-fly-out/',
+      },
+    ];
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentTime(new Date()), 60000); // Update every minute
