@@ -19,7 +19,6 @@ export default function EventsPage() {
     //   aircraft: 'aircraft',
     //   forumLink: 'event link',
     // },
-      
     [
       {
         id: 1,
@@ -33,11 +32,29 @@ export default function EventsPage() {
       {
         id: 2,
         title: 'Norwegian 7th Anniversary Flyout',
-        startTime: '2026-09-18T13:00:00Z',
-        durationMinutes: 120,    // 2 hours
-        route: 'TBA',
-        aircraft: 'TBA',
+        startTime: '2026-09-18T12:00:00Z',
+        durationMinutes: 270,    // 4:30 hours
+        route: 'ENGM - LCLK',
+        aircraft: 'Norwegian | Boeing 737 MAX8',
         forumLink: 'https://community.infiniteflight.com/t/18sep26-norwegian-air-virtual-7th-anniversary-fly-out/',
+      },
+      {
+        id: 3,
+        title: ' SUISSE Virtual 1st Anniversary',
+        startTime: '2026-09-12T16:00:00Z',
+        durationMinutes: 200,    // 3:20 hours
+        route: 'HECA - LSZH',
+        aircraft: 'EgpytAir | Boeing 737-800',
+        forumLink: 'https://community.infiniteflight.com/t/12sep26-suisse-virtual-1-year-anniversary-lszh-fly-in/',
+      },
+      {
+        id: 4,
+        title: 'Safari To The Savanna',
+        startTime: '2026-09-13T16:00:00Z',
+        durationMinutes: 300,    // 5:00 hours
+        route: 'HECA - HKJK',
+        aircraft: 'EgyptAir | Airbus A330_300',
+        forumLink: 'https://community.infiniteflight.com/t/13sep26-kenya-airways-virtual-safari-to-the-savanna-hkjk-fly-in/',
       },
     ];
 
