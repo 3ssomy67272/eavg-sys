@@ -35,7 +35,7 @@ export default function HomePage() {
           {/* Logo Animation */}
           <div className="mb-8 flex justify-center animate-in fade-in slide-in-from-top-8 duration-1000">
             <img
-              src="https://i.postimg.cc/wjgZtDXk/whitelogo.png"
+              src="https://i.postimg.cc/VLVq4zzv/whitelogo.png"
               alt="EgyptAir Virtual Logo"
               className="h-24 md:h-32 drop-shadow-2xl"
             />
