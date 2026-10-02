@@ -74,6 +74,11 @@ export default function NewsPage() {
       topic: 'VA Updates',
       news: [
         {
+          title: 'Happy Update Day! 🎉 - IF 26.4. Route base Update just got pushed and A21N',
+          date: '24 SEP 2026',
+          summary: 'With the arrival of Infinite Flight 26.4 and the introduction of the Airbus A321neo (A21N), we’ve updated our route network across both the EAVG Airtable and ATLAS Crew Center.'
+        },
+        {
           title: '✈️ New Codeshare Announcement! ✈️',
           date: '15 June 2026',
           summary: 'We’re excited to announce a brand-new codeshare partnership with Aegean Airlines, Greece’s flag carrier and one of Europe’s leading regional airlines. 🤝✨'
@@ -87,11 +92,6 @@ export default function NewsPage() {
           title: '✈️ Closure of Gulf Airspaces! ✈️',
           date: '28 February 2026',
           summary: 'Due to rising tensions in the region and the closure of several airspaces, all routes to the airports within the following airspaces are prohibited to be flown (UAE | Qatar | Bahrain | Iraq | Lebanon | Jordan | Kuwait).'
-        },
-        {
-          title: '✈️ New Codeshare Announcement! ✈️',
-          date: '11 January 2026',
-          summary: 'We’re excited to announce a new codeshare partnership with Lufty Virtual, expanding our European network with key regional, continental, and long-haul connections operated from Germany’s major hubs. 🤝✨.'
         },
       ]
     },
@@ -118,11 +118,6 @@ export default function NewsPage() {
           title: '🌟January Pilot of the Month (POTM)🌟',
           date: '4 February 2026',
           summary: `When a pilot consistently tracks their progress throughout the month, boom! They earn the title of Pilot of the Month! 🎉 Please join us in congratulating Captain Eyad | 003VG in our forum thread for being January Pilot of the Month (POTM)! 👏✈️.`
-        },
-        {
-          title: '🌟December Pilot of the Month (POTM)🌟',
-          date: '2 January 2026',
-          summary: 'Having only joined EAVG in late November ChrisIF | 248VG has shoqn exceptional dedication and climbed quickly through the ranks. Please join us in congratulating Captain ChrisIF | 248VG  in our forum thread for being December Pilot of the Month (POTM) as well as gaining the last POTM in 2025! 👏✈️.'
         },
       ]
     },
