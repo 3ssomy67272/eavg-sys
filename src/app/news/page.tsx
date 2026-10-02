@@ -15,11 +15,11 @@ export default function NewsPage() {
       { month: 'February', name: 'Adam_Ashraf', hours: 22, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'March', name: 'Adam_Ashraf', hours: 37, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'April', name: 'Adam_Ashraf', hours: 90, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
-      { month: 'May', name: 'N/A', hours: 0, image: null },
-      { month: 'June', name: 'N/A', hours: 0, image: null },
-      { month: 'July', name: 'TBA', hours: 0, image: null },
-      { month: 'August', name: 'TBA', hours: 0, image: null },
-      { month: 'September', name: 'TBA', hours: 0, image: null },
+      { month: 'May', name: 'EyadRadwan209', hours: 47, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/eyadradwan209/144/1467299_2.png" },
+      { month: 'June', name: '_Saleh', hours: 25, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/_saleh/288/1631291_2.png" },
+      { month: 'July', name: '3Ssomy167', hours: 29, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/3ssomy167/288/1624110_2.png" },
+      { month: 'August', name: 'EyadRadwan209', hours: 54, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/eyadradwan209/144/1467299_2.png" },
+      { month: 'September', name: 'Ibrahim_Dasuki', hours: 40, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/ibrahim_dasuki/288/911497_2.png" },
       { month: 'October', name: 'TBA', hours: 0, image: null },
       { month: 'November', name: 'TBA', hours: 0, image: null },
       { month: 'December', name: 'TBA', hours: 0, image: null },
@@ -98,6 +98,11 @@ export default function NewsPage() {
     {
       topic: 'Pilots Achievements',
       news: [
+        {
+          title: '🌟 September Pilot of the Month (POTM) 🌟',
+          date: '1 Oct 2026',
+          summary: `POTM is back! 🎉 This time, we’re congratulating Ibrahim on being named September’s Pilot of the Month! 🏆✈️ With an impressive number of hours and incredible dedication, he’s left the rest of us in the dust! 😂 Please join me in congratulating Ibrahim on this well-deserved achievement! 👏✈️.`
+        },
         {
           title: '🌟 April Pilot of the Month (POTM) 🌟',
           date: '2 MAY 2026',
