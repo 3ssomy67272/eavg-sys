@@ -17,14 +17,14 @@ export default function HomePage() {
     <div>
       {/* Hero Section */}
       <section 
-        className="relative h-screen flex items-center justify-center overflow-hidden"
+        className="relative h-[500] flex items-center justify-center overflow-hidden"
       >
         {/* Background Image with Zoom Effect */}
         <div 
-          className="absolute inset-0 bg-cover transition-transform duration-[20000ms] scale-y-[1.1] hover:scale-100"
+          className="absolute inset-0 bg-cover transition-transform duration-[20000ms]"
           style={{
-            backgroundImage: 'url(https://i.postimg.cc/bJYzh8FJ/Chat-GPT-Image-Apr-1-2026-06-13-38-AM.png)',
-            backgroundPosition: 'center calc(50% - 25px)'
+            backgroundImage: 'url(https://i.postimg.cc/PrbcK6Rs/26-4.png)',
+            backgroundPosition: 'center calc(70% - 0px)'
           }}
         />
         
