@@ -39,11 +39,11 @@ export default function StaffPage() {
     },
     {
       id: "5",
-      name: "Vecant",
-      position: "Head of External Affairs",
-      image: "👩‍✈️",
-      bio: "Helps Event Manger in planning and coordinating events with other Virtual Airlines.",
-      url: "#",
+      name: "Pranitabh_Roy",
+      position: "Event Officer",
+      image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/pranitabh_roy/288/1227206_2.png",
+      bio: "Work alongside with Event Mangment to highlight EAVG with brilliant event ideas and fun activties",
+      url: "https://community.infiniteflight.com/u/Pranitabh_Roy/",
     },
     {
       id: "6",
@@ -93,6 +93,7 @@ export default function StaffPage() {
         (s) =>
           s.position.includes("Head") ||
           s.position.includes("Manager") ||
+          s.position.includes("Event") ||
           s.position.includes("Market") 
       ),
     },

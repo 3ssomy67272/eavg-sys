@@ -59,6 +59,12 @@ export default function NewsPage() {
       topic: 'VA Announcments',
       news: [
         {
+          title: 'New Staff appointment',
+          date: '10 October 2026',
+          summary: `A new Face to the VG immediately became a new face to the Team too..!
+          We are pleased to announce the appointment of @roy_senpai as the new Event Officer for EgyptAir Virtual Group (EAVG)! 🇪🇬:`
+        },
+        {
           title: 'EAVG CREW CENTER TRANSITION — IMPORTANT UPDATE ',
           date: '15 December 2025',
           summary: 'Due to the shutdown of Digital Crew, EgyptAir Virtual Group (EAVG) will officially move its Crew Center to Atlas. This change is mandatory and affects all pilots..'
