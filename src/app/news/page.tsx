@@ -15,11 +15,11 @@ export default function NewsPage() {
       { month: 'February', name: 'Adam_Ashraf', hours: 22, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'March', name: 'Adam_Ashraf', hours: 37, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
       { month: 'April', name: 'Adam_Ashraf', hours: 90, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/adam_ashraf/144/1588954_2.png" },
-      { month: 'May', name: 'N/A', hours: 0, image: null },
-      { month: 'June', name: 'N/A', hours: 0, image: null },
-      { month: 'July', name: 'TBA', hours: 0, image: null },
-      { month: 'August', name: 'TBA', hours: 0, image: null },
-      { month: 'September', name: 'TBA', hours: 0, image: null },
+      { month: 'May', name: 'EyadRadwan209', hours: 47, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/eyadradwan209/144/1467299_2.png" },
+      { month: 'June', name: '_Saleh', hours: 25, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/_saleh/288/1631291_2.png" },
+      { month: 'July', name: '3Ssomy167', hours: 29, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/3ssomy167/288/1624110_2.png" },
+      { month: 'August', name: 'EyadRadwan209', hours: 54, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/eyadradwan209/144/1467299_2.png" },
+      { month: 'September', name: 'Ibrahim_Dasuki', hours: 40, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/ibrahim_dasuki/288/911497_2.png" },
       { month: 'October', name: 'TBA', hours: 0, image: null },
       { month: 'November', name: 'TBA', hours: 0, image: null },
       { month: 'December', name: 'TBA', hours: 0, image: null },
@@ -59,6 +59,12 @@ export default function NewsPage() {
       topic: 'VA Announcments',
       news: [
         {
+          title: 'New Staff appointment',
+          date: '10 October 2026',
+          summary: `A new Face to the VG immediately became a new face to the Team too..!
+          We are pleased to announce the appointment of @roy_senpai as the new Event Officer for EgyptAir Virtual Group (EAVG)! 🇪🇬:`
+        },
+        {
           title: 'EAVG CREW CENTER TRANSITION — IMPORTANT UPDATE ',
           date: '15 December 2025',
           summary: 'Due to the shutdown of Digital Crew, EgyptAir Virtual Group (EAVG) will officially move its Crew Center to Atlas. This change is mandatory and affects all pilots..'
@@ -74,6 +80,11 @@ export default function NewsPage() {
       topic: 'VA Updates',
       news: [
         {
+          title: 'Happy Update Day! 🎉 - IF 26.4. Route base Update just got pushed and A21N',
+          date: '24 SEP 2026',
+          summary: 'With the arrival of Infinite Flight 26.4 and the introduction of the Airbus A321neo (A21N), we’ve updated our route network across both the EAVG Airtable and ATLAS Crew Center.'
+        },
+        {
           title: '✈️ New Codeshare Announcement! ✈️',
           date: '15 June 2026',
           summary: 'We’re excited to announce a brand-new codeshare partnership with Aegean Airlines, Greece’s flag carrier and one of Europe’s leading regional airlines. 🤝✨'
@@ -88,16 +99,16 @@ export default function NewsPage() {
           date: '28 February 2026',
           summary: 'Due to rising tensions in the region and the closure of several airspaces, all routes to the airports within the following airspaces are prohibited to be flown (UAE | Qatar | Bahrain | Iraq | Lebanon | Jordan | Kuwait).'
         },
-        {
-          title: '✈️ New Codeshare Announcement! ✈️',
-          date: '11 January 2026',
-          summary: 'We’re excited to announce a new codeshare partnership with Lufty Virtual, expanding our European network with key regional, continental, and long-haul connections operated from Germany’s major hubs. 🤝✨.'
-        },
       ]
     },
     {
       topic: 'Pilots Achievements',
       news: [
+        {
+          title: '🌟 September Pilot of the Month (POTM) 🌟',
+          date: '1 Oct 2026',
+          summary: `POTM is back! 🎉 This time, we’re congratulating Ibrahim on being named September’s Pilot of the Month! 🏆✈️ With an impressive number of hours and incredible dedication, he’s left the rest of us in the dust! 😂 Please join me in congratulating Ibrahim on this well-deserved achievement! 👏✈️.`
+        },
         {
           title: '🌟 April Pilot of the Month (POTM) 🌟',
           date: '2 MAY 2026',
@@ -113,11 +124,6 @@ export default function NewsPage() {
           title: '🌟January Pilot of the Month (POTM)🌟',
           date: '4 February 2026',
           summary: `When a pilot consistently tracks their progress throughout the month, boom! They earn the title of Pilot of the Month! 🎉 Please join us in congratulating Captain Eyad | 003VG in our forum thread for being January Pilot of the Month (POTM)! 👏✈️.`
-        },
-        {
-          title: '🌟December Pilot of the Month (POTM)🌟',
-          date: '2 January 2026',
-          summary: 'Having only joined EAVG in late November ChrisIF | 248VG has shoqn exceptional dedication and climbed quickly through the ranks. Please join us in congratulating Captain ChrisIF | 248VG  in our forum thread for being December Pilot of the Month (POTM) as well as gaining the last POTM in 2025! 👏✈️.'
         },
       ]
     },

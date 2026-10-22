@@ -56,6 +56,15 @@ export default function EventsPage() {
         aircraft: 'EgyptAir | Airbus A330_300',
         forumLink: 'https://community.infiniteflight.com/t/13sep26-kenya-airways-virtual-safari-to-the-savanna-hkjk-fly-in/',
       },
+      {
+        id: 5,
+        title: 'The Nile to Gulf Express',
+        startTime: '2026-09-25T15:30:00Z',
+        durationMinutes: 180,    // 3:00 hours
+        route: 'HECA - OKKK',
+        aircraft: 'EgyptAir | Airbus A330_300 - Boeing 777-300ER',
+        forumLink: '../join',
+      },
     ];
 
   useEffect(() => {

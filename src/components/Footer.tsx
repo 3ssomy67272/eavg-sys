@@ -12,7 +12,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3 mb-4 items-center justify-center">
                 <div className="w-24 rounded-full flex items-center justify-center">
                   <img
-                    src="https://i.postimg.cc/wjgZtDXk/whitelogo.png"
+                    src="hhttps://i.postimg.cc/VLVq4zzv/whitelogo.png"
                     alt="logo"
                   />
                 </div>

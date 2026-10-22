@@ -33,23 +33,23 @@ export default function StaffPage() {
       id: "4",
       name: "_Saleh",
       position: "Head of Recruitment",
-      image: "https://avatars.discourse-cdn.com/v4/letter/_/da6949/144.png",
+      image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/_saleh/288/1631291_2.png",
       bio: "Processes applications and onboards new pilots.",
       url: "https://community.infiniteflight.com/u/_saleh/",
     },
     {
       id: "5",
-      name: "Vecant",
-      position: "Head of External Affairs",
-      image: "👩‍✈️",
-      bio: "Helps Event Manger in planning and coordinating events with other Virtual Airlines.",
-      url: "#",
+      name: "Pranitabh_Roy",
+      position: "Event Officer",
+      image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/pranitabh_roy/288/1227206_2.png",
+      bio: "Work alongside with Event Mangment to highlight EAVG with brilliant event ideas and fun activties",
+      url: "https://community.infiniteflight.com/u/Pranitabh_Roy/",
     },
     {
       id: "6",
       name: "_Saleh",
       position: "Events Manager",
-      image: "https://avatars.discourse-cdn.com/v4/letter/_/da6949/144.png",
+      image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/_saleh/288/1631291_2.png",
       bio: "Plans and coordinates community events.",
       url: "https://community.infiniteflight.com/u/_saleh/",
     },
@@ -93,6 +93,7 @@ export default function StaffPage() {
         (s) =>
           s.position.includes("Head") ||
           s.position.includes("Manager") ||
+          s.position.includes("Event") ||
           s.position.includes("Market") 
       ),
     },
