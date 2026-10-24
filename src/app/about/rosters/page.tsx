@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Search, ExternalLink, MapPin, Clock } from 'lucide-react';
+import { Search, ExternalLink, Clock } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import { getMembers, getPilotRanks } from '@/lib/atlas/client';
 
@@ -14,16 +14,9 @@ export default function PilotRosterPage() {
     const fetchRoster = async () => {
       try {
         setLoading(true);
-
-        const [members, ranks] = await Promise.all([
-          getMembers(),
-          getPilotRanks(),
-        ]);
-
+        const [members, ranks] = await Promise.all([getMembers(), getPilotRanks()]);
         const rankMap = new Map<number, string>();
-        for (const rank of ranks) {
-          rankMap.set(rank.id, rank.name);
-        }
+        for (const rank of ranks) rankMap.set(rank.id, rank.name);
 
         const activePilots = members
           .filter((m: any) => !m.retired && !m.revoked)
@@ -34,9 +27,8 @@ export default function PilotRosterPage() {
                   year: 'numeric',
                 }).toUpperCase()
               : 'N/A';
-
             const forumProfile = m.User?.infiniteFlightName
-              ? `https://community.infiniteflight.com/u/${m.User.infiniteFlightName}/`
+              ? 'https://community.infiniteflight.com/u/' + m.User.infiniteFlightName + '/'
               : null;
 
             return {
@@ -45,7 +37,6 @@ export default function PilotRosterPage() {
               callsign: m.callsign || 'N/A',
               rank: rankMap.get(m.rankID) || 'Unknown',
               hours: Math.round(m.flightTime / 60) || 0,
-              // location: m.hub || null,
               joinDate,
               forumProfile,
             };
@@ -53,7 +44,7 @@ export default function PilotRosterPage() {
 
         setPilots(activePilots);
       } catch (error) {
-        console.error("Error fetching roster:", error);
+        console.error('Error fetching roster:', error);
       } finally {
         setLoading(false);
       }
@@ -62,18 +53,18 @@ export default function PilotRosterPage() {
     fetchRoster();
   }, []);
 
-  const filteredPilots = pilots.filter(pilot =>
-    pilot.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    pilot.callsign.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    (pilot.location?.toLowerCase() || "").includes(searchTerm.toLowerCase()) ||
-    pilot.rank.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredPilots = pilots.filter(
+    (pilot) =>
+      pilot.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      pilot.callsign.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      pilot.rank.toLowerCase().includes(searchTerm.toLowerCase())
   );
-// {*Sort by Callsign decending*}
-  const sortedPilots = [...filteredPilots].sort((a, b) => a.callsign.localeCompare(b.callsign));
+  const sortedPilots = [...filteredPilots].sort((a, b) =>
+    a.callsign.localeCompare(b.callsign)
+  );
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
       <section className="bg-[#042C64] text-white py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal animation="fade-in">
@@ -82,21 +73,27 @@ export default function PilotRosterPage() {
           <ScrollReveal animation="slide-up" delay={200}>
             <p className="max-w-2xl mx-auto text-lg opacity-90">
               Meet our community of dedicated virtual pilots from around the world.
-              Click on any pilot's name to visit their forum profile.
+              Click on any pilot&apos;s name to visit their forum profile.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Stats */}
       <section className="py-12 bg-gray-50 border-b border-gray-200 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {[
-              { label: "Active Pilots", value: pilots.length },
-              { label: "Total Hours", value: pilots.reduce((sum, p) => sum + p.hours, 0).toLocaleString() },
-              { label: "Countries", value: new Set(pilots.map(p => p.location)).size },
-              { label: "Avg Hours/Pilot", value: Math.round(pilots.reduce((sum, p) => sum + p.hours, 0) / (pilots.length || 1)) }
+              { label: 'Active Pilots', value: pilots.length },
+              {
+                label: 'Total Hours',
+                value: pilots.reduce((sum, p) => sum + p.hours, 0).toLocaleString(),
+              },
+              {
+                label: 'Avg Hours/Pilot',
+                value: Math.round(
+                  pilots.reduce((sum, p) => sum + p.hours, 0) / (pilots.length || 1)
+                ),
+              },
             ].map((stat, index) => (
               <ScrollReveal key={index} animation="slide-up" delay={index * 100}>
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
@@ -109,17 +106,15 @@ export default function PilotRosterPage() {
         </div>
       </section>
 
-      {/* Roster Table */}
       <section className="py-12 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Search */}
           <ScrollReveal animation="slide-up">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
               <div className="relative max-w-md w-full">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Search pilots by name, callsign, location..."
+                  placeholder="Search pilots by name, callsign, or rank..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-[#042C64] shadow-sm transition-all"
@@ -130,14 +125,11 @@ export default function PilotRosterPage() {
 
           {loading ? (
             <div className="text-center py-12">
-              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#042C64]"></div>
-              <p className="mt-4 text-gray-600 font-medium">
-                Loading roster...
-              </p>
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#042C64]" />
+              <p className="mt-4 text-gray-600 font-medium">Loading roster...</p>
             </div>
           ) : (
             <>
-              {/* Mobile View - Cards */}
               <div className="md:hidden space-y-4">
                 {sortedPilots.map((pilot, index) => (
                   <ScrollReveal key={pilot.id} animation="slide-up" delay={index * 50}>
@@ -145,31 +137,17 @@ export default function PilotRosterPage() {
                       <div className="flex items-start justify-between mb-4">
                         <div>
                           {pilot.forumProfile ? (
-                            <a
-                              href={pilot.forumProfile}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-lg font-bold text-[#042C64] hover:underline flex items-center gap-2"
-                            >
-                              {pilot.name}
-                              <ExternalLink className="w-4 h-4" />
+                            <a href={pilot.forumProfile} target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-[#042C64] hover:underline flex items-center gap-2">
+                              {pilot.name}<ExternalLink className="w-4 h-4" />
                             </a>
                           ) : (
-                            <span className="text-lg font-bold text-[#042C64]">
-                              {pilot.name}
-                            </span>
+                            <span className="text-lg font-bold text-[#042C64]">{pilot.name}</span>
                           )}
                           <p className="text-[#042C64]/70 font-semibold">{pilot.callsign}</p>
                         </div>
-                        <span className="bg-[#042C64] text-white px-4 py-1 rounded-full text-sm font-bold">
-                          {pilot.hours}h
-                        </span>
+                        <span className="bg-[#042C64] text-white px-4 py-1 rounded-full text-sm font-bold">{pilot.hours}h</span>
                       </div>
                       <div className="space-y-3 text-gray-600">
-                        <div className="flex items-center gap-3">
-                          <MapPin className="w-4 h-4 text-gray-400" />
-                          <span className="text-sm font-medium">{pilot.location || 'N/A'}</span>
-                        </div>
                         <div className="flex items-center gap-3">
                           <Clock className="w-4 h-4 text-gray-400" />
                           <span className="text-sm font-medium">Joined {pilot.joinDate}</span>
@@ -184,7 +162,6 @@ export default function PilotRosterPage() {
                 ))}
               </div>
 
-              {/* Desktop View - Table */}
               <div className="hidden md:block">
                 <ScrollReveal animation="fade-in">
                   <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
@@ -195,39 +172,24 @@ export default function PilotRosterPage() {
                           <th className="px-6 py-4 text-left font-semibold">Pilot Name</th>
                           <th className="px-6 py-4 text-left font-semibold">Callsign</th>
                           <th className="px-6 py-4 text-left font-semibold">Flight Hours</th>
-                          <th className="px-6 py-4 text-left font-semibold">Location</th>
                           <th className="px-6 py-4 text-left font-semibold">Join Date</th>
                           <th className="px-6 py-4 text-left font-semibold">Profile</th>
                         </tr>
                       </thead>
                       <tbody>
                         {sortedPilots.map((pilot, index) => (
-                          <tr
-                            key={pilot.id}
-                            className={`border-b border-gray-100 hover:bg-gray-50/80 transition-colors ${
-                              index % 2 === 0 ? 'bg-white' : 'bg-gray-50/40'
-                            }`}
-                          >
+                          <tr key={pilot.id} className={['border-b border-gray-100 hover:bg-gray-50/80 transition-colors', index % 2 === 0 ? 'bg-white' : 'bg-gray-50/40'].join(' ')}>
                             <td className="px-6 py-4 text-gray-700 font-medium">{pilot.rank}</td>
                             <td className="px-6 py-4 font-bold text-gray-900">{pilot.name}</td>
                             <td className="px-6 py-4 text-gray-600 font-semibold">{pilot.callsign}</td>
                             <td className="px-6 py-4">
-                              <span className="bg-[#042C64]/10 text-[#042C64] px-4 py-1 rounded-full text-sm font-bold">
-                                {pilot.hours} hours
-                              </span>
+                              <span className="bg-[#042C64]/10 text-[#042C64] px-4 py-1 rounded-full text-sm font-bold">{pilot.hours} hours</span>
                             </td>
-                            <td className="px-6 py-4 text-gray-600 font-medium">{pilot.location || 'N/A'}</td>
                             <td className="px-6 py-4 text-gray-500">{pilot.joinDate}</td>
                             <td className="px-6 py-4">
                               {pilot.forumProfile ? (
-                                <a
-                                  href={pilot.forumProfile}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-[#042C64] hover:text-blue-700 transition-colors flex items-center gap-1 font-semibold"
-                                >
-                                  View
-                                  <ExternalLink className="w-4 h-4" />
+                                <a href={pilot.forumProfile} target="_blank" rel="noopener noreferrer" className="text-[#042C64] hover:text-blue-700 transition-colors flex items-center gap-1 font-semibold">
+                                  View<ExternalLink className="w-4 h-4" />
                                 </a>
                               ) : (
                                 <span className="text-gray-400">—</span>
@@ -261,7 +223,6 @@ export default function PilotRosterPage() {
         </div>
       </section>
 
-      {/* Join CTA */}
       <section className="py-24 bg-[#042C64] text-white overflow-hidden relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <ScrollReveal animation="zoom-in">
@@ -269,10 +230,7 @@ export default function PilotRosterPage() {
             <p className="text-xl mb-10 opacity-80 max-w-2xl mx-auto">
               Become part of the EAVG community and start your virtual aviation journey with us today.
             </p>
-            <a
-              href="/join"
-              className="inline-block bg-white text-[#042C64] px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all hover:scale-105 shadow-xl"
-            >
+            <a href="/join" className="inline-block bg-white text-[#042C64] px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all hover:scale-105 shadow-xl">
               Join Now
             </a>
           </ScrollReveal>
