@@ -30,6 +30,7 @@ package-lock.json
 next-env.d.ts
 .env.local
 *.log
+.*/
 
 # debug
 npm-debug.log*

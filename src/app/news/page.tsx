@@ -20,7 +20,7 @@ export default function NewsPage() {
       { month: 'July', name: '3Ssomy167', hours: 29, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/3ssomy167/288/1624110_2.png" },
       { month: 'August', name: 'EyadRadwan209', hours: 54, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/eyadradwan209/144/1467299_2.png" },
       { month: 'September', name: 'Ibrahim_Dasuki', hours: 40, image: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/ibrahim_dasuki/288/911497_2.png" },
-      { month: 'October', name: 'TBA', hours: 0, image: null },
+      { month: 'October', name: 'Pranitabh_Roy', hours: 117, image: 'https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/pranitabh_roy/288/1227206_2.png' },
       { month: 'November', name: 'TBA', hours: 0, image: null },
       { month: 'December', name: 'TBA', hours: 0, image: null },
     ],
@@ -105,6 +105,11 @@ export default function NewsPage() {
       topic: 'Pilots Achievements',
       news: [
         {
+          title: '🌟 October Pilot of the Month (POTM) 🌟',
+          date: '7 Nov 2026',
+          summary: `Another month, another pilot who has gone above and beyond! 🎉 Please join me in congratulating Captain Pranitabh_Roy on this well-deserved achievement! on our IFC thread 👏✈️.`
+        },
+        {
           title: '🌟 September Pilot of the Month (POTM) 🌟',
           date: '1 Oct 2026',
           summary: `POTM is back! 🎉 This time, we’re congratulating Ibrahim on being named September’s Pilot of the Month! 🏆✈️ With an impressive number of hours and incredible dedication, he’s left the rest of us in the dust! 😂 Please join me in congratulating Ibrahim on this well-deserved achievement! 👏✈️.`
@@ -119,11 +124,6 @@ export default function NewsPage() {
           date: '3 March 2026',
           summary: `Not a new face, but a familiar one... known for his passion for flying with EgyptAir, his Funny & Friendly talk, the incredible Shots he gets from his flights, and his constant encouragement others to take to the skies!
            @Adam | 990VG is waiting for Community Congrats in our forum thread. Please join us in congratulating him on earning Pilot of the Month for February! 🎉✈️.`
-        },
-        {
-          title: '🌟January Pilot of the Month (POTM)🌟',
-          date: '4 February 2026',
-          summary: `When a pilot consistently tracks their progress throughout the month, boom! They earn the title of Pilot of the Month! 🎉 Please join us in congratulating Captain Eyad | 003VG in our forum thread for being January Pilot of the Month (POTM)! 👏✈️.`
         },
       ]
     },
